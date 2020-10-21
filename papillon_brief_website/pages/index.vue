@@ -2,7 +2,11 @@
   <div class="container">
     <Navigation class="navi"/>
     <div class="firstPanel">
-      
+      <div class="bar">
+        <div class="papillon">
+          <img src="~/static/image/papillon.png" class="logo" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +45,27 @@ export default {
     width: 100%;
 
     background: #fafafa;
+
+    .bar {
+      .papillon {
+        .logo {
+          position: relative;
+          height: 80px;
+          width: 80px;
+        }
+      }
+      .papillon:after {
+        content: "Papillon";
+        position: absolute;
+        top: 16px;
+        margin-left: 5px;
+
+        font-weight: 900;
+        font-size: 36px;
+        font-family: 'Roboto', sans-serif;
+        color: #212121;
+      }
+    }
   }
 }
 </style>

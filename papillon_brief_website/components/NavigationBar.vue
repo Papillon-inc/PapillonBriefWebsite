@@ -58,7 +58,14 @@
       top: -36px;
       right: 30px;
       font-size: 24px;
+      font-weight: 500;
       text-align: right;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      text-decoration: underline #7565E1 3px;
+      text-decoration-skip-ink: none;
     }
 
     .news {
@@ -66,7 +73,14 @@
       top: -36px;
       right: 20px;
       font-size: 24px;
+      font-weight: 500;
       text-align: right;
+      cursor: pointer;
+    }
+
+    .news:hover {
+      text-decoration: underline #7565E1 3px;
+      text-decoration-skip-ink: none;
     }
 
     .contact {
@@ -74,14 +88,28 @@
       right: 10px;
       top: -36px;
       font-size: 24px;
+      font-weight: 500;
       text-align: right;
+      cursor: pointer;
+    }
+
+    .contact:hover {
+      text-decoration: underline #7565E1 3px;
+      text-decoration-skip-ink: none;
     }
 
     .info {
       position: relative;
       top: -36px;
       font-size: 24px;
+      font-weight: 500;
       text-align: right;
+      cursor: pointer;
+    }
+
+    .info:hover {
+      text-decoration: underline #7565E1 3px;
+      text-decoration-skip-ink: none;
     }
   }
 }
