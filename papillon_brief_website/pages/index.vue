@@ -50,6 +50,17 @@
       </div>
     </div>
     <div class="thirdPanel">
+      <div class="title">
+        <div class="purpleDot"></div>
+        News
+        <div class="detail">当社の様々な情報を素早くお届け致します。</div>
+        <div v-for="n in news" :key="n">
+          <div class="banner">
+            <span class="bannerDate">{{n.date}}</span>
+            <span class="bannerTitle">{{n.title}}</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -60,6 +71,32 @@ import Navigation from '~/components/NavigationBar.vue'
 export default {
   components: {
     Navigation
+  },
+  data() {
+    return {
+      news: [
+        {
+          "date": "2020/08/08",
+          "title": "大会配信について"
+        },
+        {
+          "date": "2020/09/30",
+          "title": "大会開催"
+        },
+        {
+          "date": "2020/10/1",
+          "title": "アップデートについて"
+        },
+        {
+          "date": "2020/10/2",
+          "title": "アップデートに伴う注意"
+        },
+        {
+          "date": "2020/10/15",
+          "title": "大会中止のお知らせ"
+        }
+      ]
+    }
   }
 }
 </script>
@@ -289,14 +326,62 @@ body, html {
     }
     .image:before {
       content: url("../static/image/menu.png");
-      margin-right: 90px;
+      margin-right: 80px;
     }
   }
 
   .thirdPanel {
     position: relative;
     height: 710px;
+
+    .title {
+      position: relative;
+      top: 100px;
+      left: 200px;
+
+      color: #212121;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .detail {
+      position: relative;
+      top: 5px;
+      left: -24px;
+
+      color: #767676;
+      font-size: 28px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .banner {
+      position: relative;
+      color: #212121;
+      font-size: 26px;
+      margin-top: 36px;
+      left: -24px;
+      cursor: pointer;
+
+      .bannerDate {
+        color: #767676;
+      }
+
+      .bannerTitle {
+        position: absolute;
+        left: 200px;
+      }
+    }
   }
+}
+
+.purpleDot {
+  position: absolute;
+  top: 8px;
+  left: -24px;
+
+  background: #7565E1;
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
 }
 
 @keyframes fadeIn {
