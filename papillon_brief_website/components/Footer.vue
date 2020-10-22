@@ -1,7 +1,10 @@
 <template>
   <div class="footer">
-    <span class="copyright">@2020 Papillon, Inc</span>
-    <span class="papillon">Papillon</span>
+    <div class="text">
+      <span class="copyright">@2020 Papillon, Inc</span>
+      <font-awesome-icon :icon="['fab', 'twitter']" class="twitter" />
+      <span class="papillon">@Papillon</span>
+    </div>
   </div>
 </template>
 
@@ -23,18 +26,29 @@ export default {
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
 
-  .copyright {
+  .text {
     position: relative;
-    left: 10%;
-    top: 20px;
-  }
+    top: 30px;
+    width: 100%;
 
-  .papillon {
-    position: absolute;
+    .copyright {
+      position: absolute;
+      left: 10%;
+      text-align: left;
+    }
 
-    right: 10%;
-    top: 20px;
-    text-align: right;
+    .twitter {
+      position: absolute;
+      top: 5px;
+      right: calc(10% + 110px);
+      text-align: right;
+    }
+
+    .papillon {
+      position: absolute;
+      right: 10%;
+      text-align: left;
+    }
   }
 }
 </style>
