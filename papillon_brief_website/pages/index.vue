@@ -94,15 +94,21 @@
         </div>
       </div>
     </div>
+    <div class="fifthPanel">
+
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navigation from '~/components/NavigationBar.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    Navigation
+    Navigation,
+    Footer
   },
   data() {
     return {
@@ -498,6 +504,13 @@ select {
         font-family: 'Roboto', sans-serif;
       }
     }
+  }
+
+  .fifthPanel {
+    position: relative;
+    background: #F5F7FA;
+    height: 810px;
+    width: 100%;
   }
 }
 
