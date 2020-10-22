@@ -86,8 +86,8 @@
             お問い合わせ内容<br>
             <div class="selectWrap">
               <select name="inquiry">
-                <option value="complaint">クレーム</option>
-                <option value="complaint">クレーム</option>
+                <option value="question">質問</option>
+                <option value="idea">意見</option>
               </select>
             </div>
           </div>
@@ -95,7 +95,30 @@
       </div>
     </div>
     <div class="fifthPanel">
-
+      <div class="title">
+        <div class="purpleDot"></div>
+        Company Info
+        <div class="detail">会社情報</div>
+      </div>
+      <div class="info">
+        <span class="key">企業名</span>
+        <span class="content">株式会社Papillon</span>
+      </div>
+      <div class="info">
+        <span class="key">代表者</span>
+        <span class="content">都築亮吾</span>
+      </div>
+      <div class="info">
+        <span class="key">設立</span>
+        <span class="content">2019年12月03日</span>
+      </div>
+      <div class="info">
+        <span class="key">所在地</span>
+        <span class="content">愛知県豊田市栄町 4-2-9</span>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.333949226142!2d137.14966815130126!3d35.09837118023784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a00bc6c4a4a5%3A0x2363a3d5f0bd8e02!2z44CSNDcxLTAwNjYg5oSb55-l55yM6LGK55Sw5biC5qCE55S677yS5LiB55uu77yZ4oiS77yRIOOCteOCq-OCqOe-veW5uA!5e0!3m2!1sja!2sjp!4v1603384880793!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+      class="map">
+      </iframe>
     </div>
     <Footer />
   </div>
@@ -511,6 +534,49 @@ select {
     background: #F5F7FA;
     height: 810px;
     width: 100%;
+
+    .title {
+      position: relative;
+      top: 100px;
+      left: 200px;
+      margin-bottom: 150px;
+
+      color: #212121;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .detail {
+      position: relative;
+      top: 10px;
+      left: -24px;
+
+      color: #767676;
+      font-size: 28px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .info {
+      position: relative;
+      left: 200px;
+      margin-top: 40px;
+
+      .key {
+        position: relative;
+        color: #767676;
+        font-size: 26px;
+      }
+      .content {
+        position: absolute;
+        left: 120px;
+        color: #212121;
+        font-size: 26px;
+      }
+    }
+    .map {
+      position: absolute;
+      right: 10%;
+      top: 100px;
+    }
   }
 }
 
