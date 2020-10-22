@@ -31,6 +31,26 @@
         <img src="~/static/image/ossan.png" class="ossan" />
       </div>
     </div>
+    <div class="secondPanel">
+      <div class="textBlock">
+        <span class="title">
+          シンプルでわかりやすく<br>
+          <br>
+          <br>
+          <br>
+        </span>
+        〇〇分であっという間にユーザー登録完了。<br>
+        大会に参加するための長い手続きもなし。<br>
+        "<span class="highlight">面倒な手続き</span>"は、もう必要ありません。<br>
+        シンプルなデザインを採用することで<br>
+        アプリ内に難しい操作はありません。
+      </div>
+      <div class="image">
+        <img src="~/static/image/chat.png" />
+      </div>
+    </div>
+    <div class="thirdPanel">
+    </div>
   </div>
 </template>
 
@@ -47,9 +67,17 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   margin: 0;
-  height: 2400px;
+  padding: 0;
+  background: #fafafa;
+  overflow-x: hidden;
+  //animation: fadeIn 1s ease 1s 1 normal;
 
   .navi {
     position: fixed;
@@ -146,8 +174,8 @@ export default {
 
     .textBlock {
       position: relative;
-      margin-top: 200px;
-      left: 50%;
+      margin-top: 300px;
+      left: 51%;
 
       width: 80%;
 
@@ -210,12 +238,77 @@ export default {
 
       .ossan {
         position: absolute;
-        top: 0;
-        right: -100px;
-        width: 700px;
-        height: 700px;
+
+        top: -150px;
+        right: -90px;
+        width: 730px;
+        height: 730px;
       }
     }
   }
+
+  .secondPanel {
+    position: relative;
+    margin-top: 80px;
+    background: #7565E1;
+
+    height: 900px;
+    width: 100%;
+
+    .textBlock {
+      position: relative;
+
+      top: 50%;
+      left: 10%;
+      color: white;
+      font-size: 28px;
+      font-family: 'Roboto', sans-serif;
+
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+
+      .title {
+        font-weight: 700;
+        font-size: 36px;
+      }
+
+      .highlight {
+        color: #E2FF1A;
+      }
+    }
+
+    .image {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+    }
+    .image:before {
+      content: url("../static/image/menu.png");
+      margin-right: 90px;
+    }
+  }
+
+  .thirdPanel {
+    position: relative;
+    height: 710px;
+  }
 }
+
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.1s
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+}
+
 </style>
