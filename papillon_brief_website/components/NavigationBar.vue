@@ -59,6 +59,7 @@
       right: 30px;
       font-size: 24px;
       font-weight: 500;
+      font-family: 'Roboto', sans-serif;
       text-align: right;
       cursor: pointer;
     }
@@ -74,6 +75,7 @@
       right: 20px;
       font-size: 24px;
       font-weight: 500;
+      font-family: 'Roboto', sans-serif;
       text-align: right;
       cursor: pointer;
     }
@@ -89,6 +91,7 @@
       top: -36px;
       font-size: 24px;
       font-weight: 500;
+      font-family: 'Roboto', sans-serif;
       text-align: right;
       cursor: pointer;
     }
@@ -103,6 +106,7 @@
       top: -36px;
       font-size: 24px;
       font-weight: 500;
+      font-family: 'Roboto', sans-serif;
       text-align: right;
       cursor: pointer;
     }
