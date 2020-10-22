@@ -60,6 +60,38 @@
             <span class="bannerTitle">{{n.title}}</span>
           </div>
         </div>
+        <span class="seeDetail">詳しく見る</span>
+      </div>
+    </div>
+    <div class="fourthPanel">
+      <div class="title">
+        <div class="purpleDot"></div>
+        Contact
+        <div class="detail">お気軽にご相談ください。</div>
+        <div class="forms">
+          <div class="topic">
+            会社名<br>
+            <input type="text" placeholder="例:株式会社Papillon" /><br>
+          </div>
+          <div class="topic">
+            お名前<br>
+            <input type="text" placeholder="姓" class="shortInput" /><br>
+            <input type="text" placeholder="名" class="shortInput" /><br>
+          </div>
+          <div class="topic">
+            メールアドレス<br>
+            <input type="text" placeholder="例:papillon@domain.com" />
+          </div>
+          <div class="topic">
+            お問い合わせ内容<br>
+            <div class="selectWrap">
+              <select name="inquiry">
+                <option value="complaint">クレーム</option>
+                <option value="complaint">クレーム</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -107,6 +139,43 @@ export default {
 body, html {
   margin: 0;
   padding: 0;
+}
+
+input {
+  margin-top: 18px;
+  width: 65%;
+  height: 87px;
+  font-size: 32px;
+  padding-left: 30px;
+  background: #f6f6f6;
+  border: none;
+}
+
+select {
+  position: relative;
+  margin-top: 18px;
+  width: 65%;
+  height: 87px;
+  font-size: 32px;
+  padding-left: 30px;
+  background: #f6f6f6;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.shortInput {
+  width: 40%;
+}
+
+.down-arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .container {
@@ -332,7 +401,8 @@ body, html {
 
   .thirdPanel {
     position: relative;
-    height: 710px;
+    height: 750px;
+    background: white;
 
     .title {
       position: relative;
@@ -345,8 +415,9 @@ body, html {
     }
     .detail {
       position: relative;
-      top: 5px;
+      top: 10px;
       left: -24px;
+      margin-bottom: 100px;
 
       color: #767676;
       font-size: 28px;
@@ -368,6 +439,63 @@ body, html {
       .bannerTitle {
         position: absolute;
         left: 200px;
+      }
+    }
+
+    .seeDetail {
+      position: relative;
+      top: 50px;
+      height: 60px;
+      width: auto;
+      padding-left: 110px;
+      padding-right: 110px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: white;
+      font-size: 24px;
+      background: black;
+      border-radius: 26px;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+    }
+  }
+
+  .fourthPanel {
+    position: relative;
+    height: 1140px;
+    width: 100%;
+
+    .title {
+      position: relative;
+      top: 100px;
+      left: 200px;
+
+      color: #212121;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .detail {
+      position: relative;
+      top: 10px;
+      left: -24px;
+
+      color: #767676;
+      font-size: 28px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .forms {
+      position: relative;
+      top: 80px;
+      left: -24px;
+
+      .topic {
+        color: #212121;
+        margin-top: 30px;
+        font-size: 26px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
       }
     }
   }
