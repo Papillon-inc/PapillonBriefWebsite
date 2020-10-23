@@ -25,6 +25,10 @@
   background: white;
   box-shadow: #dbdbdb 2px 2px 2px;
 
+  @media screen and (max-width: 600px){
+    display: none;
+  }
+
   .papillonPos {
     position: relative;
     left: 20%;

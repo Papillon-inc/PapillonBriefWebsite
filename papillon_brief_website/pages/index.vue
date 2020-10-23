@@ -241,6 +241,11 @@ select {
 
       width: 80%;
 
+      @media screen and (max-width: 600px) {
+        top: 20px;
+        width: 90%;
+      }
+
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
@@ -250,6 +255,11 @@ select {
           position: relative;
           height: 80px;
           width: 80px;
+
+          @media screen and (max-width: 600px) {
+            width: 26px;
+            height: 26px;
+          }
         }
       }
       .papillon:after {
@@ -262,6 +272,13 @@ select {
         font-size: 36px;
         font-family: 'Roboto', sans-serif;
         color: #212121;
+
+        @media screen and (max-width: 600px) {
+          top: 6px;
+          margin-left: 3px;
+          font-size: 12px;
+          z-index: 3;
+        }
       }
 
       .menu {
@@ -270,6 +287,10 @@ select {
         right: 0;
         color: #767676;
 
+        @media screen and (max-width: 600px) {
+          top: 2px;
+        }
+
         .product {
           position: relative;
           right: 60px;
@@ -277,6 +298,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            right: 16px;
+            font-size: 12px;
+          }
         }
 
         .news {
@@ -286,6 +312,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            right: 12px;
+            font-size: 12px;
+          }
         }
 
         .contact {
@@ -295,6 +326,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            right: 8px;
+            font-size: 12px;
+          }
         }
 
         .info {
@@ -303,6 +339,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            right: 4px;
+            font-size: 12px;
+          }
         }
       }
     }
