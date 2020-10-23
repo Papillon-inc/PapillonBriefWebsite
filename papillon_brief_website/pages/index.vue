@@ -758,6 +758,10 @@ select {
     height: 810px;
     width: 100%;
 
+    @media screen and (max-width: 600px) {
+      height: 600px;
+    }
+
     .title {
       position: relative;
       top: 100px;
@@ -767,6 +771,13 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+        margin-bottom: 55px;
+      }
     }
     .detail {
       position: relative;
@@ -776,6 +787,13 @@ select {
       color: #767676;
       font-size: 28px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 5px;
+        font-size: 16px;
+        left: -14px;
+        margin-bottom: 10px;
+      }
     }
 
     .info {
@@ -783,22 +801,46 @@ select {
       left: 200px;
       margin-top: 40px;
 
+      @media screen and (max-width: 600px) {
+        left: 5%;
+        margin-top: 20px;
+      }
+
       .key {
         position: relative;
         color: #767676;
         font-size: 26px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+        }
       }
       .content {
         position: absolute;
         left: 120px;
         color: #212121;
         font-size: 26px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 14px;
+        }
       }
     }
     .map {
       position: absolute;
       right: 10%;
       top: 100px;
+
+      @media screen and (max-width: 600px) {
+        top: 300px;
+        left: 50%;
+        width: 300px;
+        height: 240px;
+
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+      }
     }
   }
 }
