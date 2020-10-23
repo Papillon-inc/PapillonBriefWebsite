@@ -13,6 +13,7 @@
           <span class="info">Company Info</span>
         </div>
       </div>
+      <img src="~/static/image/ossan_square.jpg" class="ossanSquare" />
       <div class="textBlock">
         <span class="toSport">
           遊びからスポーツへ
@@ -232,6 +233,10 @@ select {
     height: 1060px;
     width: 100%;
 
+    @media screen and (max-width: 600px) {
+      height: 500px;
+    }
+
     background: #fafafa;
 
     .bar {
@@ -242,8 +247,11 @@ select {
       width: 80%;
 
       @media screen and (max-width: 600px) {
-        top: 20px;
-        width: 90%;
+        top: 10px;
+        width: 100%;
+        padding-left: 5%;
+        z-index: 2;
+        background: #fafafa;
       }
 
       transform: translateX(-50%);
@@ -284,7 +292,7 @@ select {
       .menu {
         position: absolute;
         top: 20px;
-        right: 0;
+        right: 5%;
         color: #767676;
 
         @media screen and (max-width: 600px) {
@@ -348,6 +356,16 @@ select {
       }
     }
 
+    .ossanSquare {
+      position: relative;
+      top: 0px;
+      width: 100%;
+
+      @media screen and (min-width: 600px) {
+        display: none;
+      }
+    }
+
     .textBlock {
       position: relative;
       margin-top: 300px;
@@ -359,6 +377,11 @@ select {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
 
+      @media screen and (max-width: 600px) {
+        margin-top: 40px;
+        left: 45%;
+      }
+
       .toSport {
         position: relative;
         color: #212121;
@@ -366,11 +389,19 @@ select {
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         letter-spacing: 1.15px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 12px;
+        }
       }
 
       .eplayersPos {
         position: relative;
         margin-top: 25px;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 5px;
+        }
 
         .eplayers {
           margin-top: 30px;
@@ -383,12 +414,22 @@ select {
           font-size: 52px;
           font-family: 'Roboto', sans-serif;
 
+          @media screen and (max-width: 600px) {
+            margin-top: 14px;
+            margin-left: 5px;
+            font-size: 16px;
+          }
+
           .praise {
             color: #212121;
             font-size: 36px;
             margin-left: 2px;
 
             font-weight: 500;
+
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -396,6 +437,17 @@ select {
         position: relative;
         content: url(../static/image/logo.png);
         margin-top: 25px;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 10px;
+          display: inline-block;
+          height: 28px;
+          width: 28px;
+          content: '';
+          background-image: url(../static/image/logo.png);
+          background-size: contain;
+          vertical-align: middle;
+        }
       }
 
       .content {
@@ -405,6 +457,11 @@ select {
         font-size: 28px;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
+
+        @media screen and (max-width: 600px) {
+          top: 20px;
+          font-size: 14px;
+        }
 
         .eplayers {
           color: #BE2B50;
@@ -419,6 +476,10 @@ select {
         right: -90px;
         width: 730px;
         height: 730px;
+
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
       }
     }
   }
