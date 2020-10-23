@@ -378,7 +378,7 @@ select {
       -moz-transform: translateX(-50%);
 
       @media screen and (max-width: 600px) {
-        margin-top: 40px;
+        margin-top: 20px;
         left: 45%;
       }
 
