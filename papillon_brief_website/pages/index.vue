@@ -179,6 +179,14 @@ input {
   padding-left: 30px;
   background: #f6f6f6;
   border: none;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 14px;
+    height: 30px;
+    padding-left: 15px;
+    padding-left: 5%;
+    font-size: 14px;
+  }
 }
 
 select {
@@ -193,6 +201,14 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 14px;
+    height: 30px;
+    padding-left: 15px;
+    padding-left: 5%;
+    font-size: 14px;
+  }
 }
 
 .shortInput {
@@ -675,6 +691,10 @@ select {
     height: 1140px;
     width: 100%;
 
+    @media screen and (max-width: 600px) {
+      height: 500px;
+    }
+
     .title {
       position: relative;
       top: 100px;
@@ -683,6 +703,12 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+      }
     }
     .detail {
       position: relative;
@@ -692,6 +718,13 @@ select {
       color: #767676;
       font-size: 28px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 5px;
+        font-size: 16px;
+        left: -14px;
+        margin-bottom: 40px;
+      }
     }
 
     .forms {
@@ -699,12 +732,22 @@ select {
       top: 80px;
       left: -24px;
 
+      @media screen and (max-width: 600px) {
+        top: 10px;
+        left: -14px;
+      }
+
       .topic {
         color: #212121;
         margin-top: 30px;
         font-size: 26px;
         font-weight: 500;
         font-family: 'Roboto', sans-serif;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 20px;
+          font-size: 14px;
+        }
       }
     }
   }
