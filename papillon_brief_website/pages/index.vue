@@ -47,7 +47,7 @@
         アプリ内に難しい操作はありません。
       </div>
       <div class="image">
-        <img src="~/static/image/chat.png" />
+        <img src="~/static/image/chat.png" class="image2" />
       </div>
     </div>
     <div class="thirdPanel">
@@ -492,6 +492,11 @@ select {
     height: 900px;
     width: 100%;
 
+    @media screen and (max-width: 600px) {
+      margin-top: 0;
+      height: 500px;
+    }
+
     .textBlock {
       position: relative;
 
@@ -505,9 +510,19 @@ select {
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
 
+      @media screen and (max-width: 600px) {
+        top: 35%;
+        left: 5%;
+        font-size: 14px;
+      }
+
       .title {
         font-weight: 700;
         font-size: 36px;
+
+        @media screen and (max-width: 600px) {
+          font-size: 18px;
+        }
       }
 
       .highlight {
@@ -515,6 +530,7 @@ select {
       }
     }
 
+    //FIXME: 配置めちゃくちゃ
     .image {
       position: absolute;
       top: 50%;
@@ -523,10 +539,36 @@ select {
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
+
+      @media screen and (max-width: 600px) {
+        top: 65%;
+        left: 50%;
+      }
     }
     .image:before {
       content: url("../static/image/menu.png");
       margin-right: 80px;
+
+      @media screen and (max-width: 600px) {
+        position: relative;
+        top: 50px;
+        right: 130px;
+        display: inline-block;
+        width: 95px;
+        height: 190px;
+        content: '';
+        background-image: url(../static/image/menu.png);
+        background-size: contain;
+        vertical-align: middle;
+      }
+    }
+    .image2 {
+      @media screen and (max-width: 600px) {
+        position: absolute;
+        width: 95px;
+        top: 49px;
+        left: 40px;
+      }
     }
   }
 
