@@ -577,6 +577,10 @@ select {
     height: 750px;
     background: white;
 
+    @media screen and (max-width: 600px) {
+      height: 350px;
+    }
+
     .title {
       position: relative;
       top: 100px;
@@ -585,6 +589,12 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+      }
     }
     .detail {
       position: relative;
@@ -595,6 +605,13 @@ select {
       color: #767676;
       font-size: 28px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 600px) {
+        top: 5px;
+        font-size: 16px;
+        left: -14px;
+        margin-bottom: 40px;
+      }
     }
 
     .banner {
@@ -605,6 +622,12 @@ select {
       left: -24px;
       cursor: pointer;
 
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+        left: -14px;
+        margin-top: 12px;
+      }
+
       .bannerDate {
         color: #767676;
       }
@@ -612,6 +635,10 @@ select {
       .bannerTitle {
         position: absolute;
         left: 200px;
+
+        @media screen and (max-width: 600px) {
+          left: 100px;
+        }
       }
     }
 
@@ -631,6 +658,15 @@ select {
       text-align: center;
       font-family: 'Roboto', sans-serif;
       cursor: pointer;
+
+      @media screen and (max-width: 600px) {
+        top: 25px;
+        height: 20px;
+        width: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 12px;
+      }
     }
   }
 
@@ -733,6 +769,13 @@ select {
   width: 16px;
   height: 16px;
   border-radius: 10px;
+
+  @media screen and (max-width: 600px) {
+    top: 7px;
+    left: -14px;
+    width: 10px;
+    height: 10px;
+  }
 }
 
 @keyframes fadeIn {
