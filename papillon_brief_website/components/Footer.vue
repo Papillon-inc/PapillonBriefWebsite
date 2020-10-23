@@ -26,10 +26,19 @@ export default {
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
 
+  @media screen and (max-width: 600px) {
+    height: 60px;
+    font-size: 14px;
+  }
+
   .text {
     position: relative;
     top: 30px;
     width: 100%;
+
+    @media screen and (max-width: 600px) {
+      top: 20px;
+    }
 
     .copyright {
       position: absolute;
@@ -42,6 +51,11 @@ export default {
       top: 5px;
       right: calc(10% + 110px);
       text-align: right;
+
+      @media screen and (max-width: 600px) {
+        top: 2px;
+        right: 105px;
+      }
     }
 
     .papillon {
