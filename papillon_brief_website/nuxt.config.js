@@ -32,6 +32,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-fontawesome',
+    'nuxt-webfontloader',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -49,4 +50,10 @@ export default {
       }
     ]
   },
+
+  webfontloader: {
+    google: {
+      families: ['Roboto']
+    }
+  }
 }

@@ -38,7 +38,6 @@
           シンプルでわかりやすく<br>
           <br>
           <br>
-          <br>
         </span>
         〇〇分であっという間にユーザー登録完了。<br>
         大会に参加するための長い手続きもなし。<br>
@@ -477,6 +476,7 @@ select {
         @media screen and (max-width: 600px) {
           top: 20px;
           font-size: 14px;
+          margin-bottom: 30px;
         }
 
         .eplayers {
@@ -509,8 +509,8 @@ select {
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      margin-top: 0;
-      height: 500px;
+      margin-top: 30px;
+      height: 460px;
     }
 
     .textBlock {
@@ -527,9 +527,13 @@ select {
       -moz-transform: translateY(-50%);
 
       @media screen and (max-width: 600px) {
-        top: 35%;
-        left: 5%;
+        top: 30px;
+        left: 16px;
         font-size: 14px;
+
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
       }
 
       .title {
@@ -557,8 +561,8 @@ select {
       -moz-transform: translateY(-50%);
 
       @media screen and (max-width: 600px) {
-        top: 65%;
-        left: 50%;
+        top: 270px;
+        left: 14px;
       }
     }
     .image:before {
@@ -568,7 +572,7 @@ select {
       @media screen and (max-width: 600px) {
         position: relative;
         top: 50px;
-        right: 130px;
+        left: 120px;
         display: inline-block;
         width: 95px;
         height: 190px;
@@ -583,7 +587,7 @@ select {
         position: absolute;
         width: 95px;
         top: 49px;
-        left: 40px;
+        left: 16px;
       }
     }
   }
