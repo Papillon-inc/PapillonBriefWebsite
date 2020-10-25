@@ -112,13 +112,13 @@
         <span class="key">設立</span>
         <span class="content">2019年12月03日</span>
       </div>
-      <div class="info">
+      <!-- <div class="info">
         <span class="key">所在地</span>
         <span class="content">愛知県豊田市栄町 4-2-9</span>
-      </div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.333949226142!2d137.14966815130126!3d35.09837118023784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a00bc6c4a4a5%3A0x2363a3d5f0bd8e02!2z44CSNDcxLTAwNjYg5oSb55-l55yM6LGK55Sw5biC5qCE55S677yS5LiB55uu77yZ4oiS77yRIOOCteOCq-OCqOe-veW5uA!5e0!3m2!1sja!2sjp!4v1603384880793!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
+      </div> -->
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.333949226142!2d137.14966815130126!3d35.09837118023784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a00bc6c4a4a5%3A0x2363a3d5f0bd8e02!2z44CSNDcxLTAwNjYg5oSb55-l55yM6LGK55Sw5biC5qCE55S677yS5LiB55uu77yZ4oiS77yRIOOCteOCq-OCqOe-veW5uA!5e0!3m2!1sja!2sjp!4v1603384880793!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
       class="map">
-      </iframe>
+      </iframe> -->
     </div>
     <Footer />
   </div>
@@ -188,6 +188,7 @@ input {
   }
 }
 
+//FIXME: 三角形を出したい
 select {
   position: relative;
   margin-top: 18px;
@@ -200,6 +201,9 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: url(../static/image/triangle.png) right 50% no-repeat, -webkit-linear-gradient(top, #fff 0%,#efebe1 100%);
+  background: url(../static/image/triangle.png) right 50% no-repeat, linear-gradient(top, #fff 0%,#efebe1 100%);
+  background-size: 20px, 100%;
 
   @media screen and (max-width: 600px) {
     margin-top: 14px;
@@ -763,7 +767,7 @@ select {
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 600px;
+      height: 230px;
     }
 
     .title {
