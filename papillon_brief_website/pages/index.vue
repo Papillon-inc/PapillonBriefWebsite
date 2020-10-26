@@ -86,6 +86,7 @@
             お問い合わせ内容<br>
             <div class="selectWrap">
               <select name="inquiry">
+                <option selected="true" disabled="disabled">選択してください...</option>
                 <option value="question">質問</option>
                 <option value="idea">意見</option>
               </select>
