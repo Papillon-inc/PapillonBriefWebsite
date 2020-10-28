@@ -259,6 +259,14 @@ select {
     height: 1060px;
     width: 100%;
 
+    @media screen and (max-width: 1570px) {
+      height: 750px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      height: 600px;
+    }
+
     @media screen and (max-width: 600px) {
       height: 500px;
     }
@@ -403,6 +411,14 @@ select {
       -webkit-transform: translateX(-50%);
       -moz-transform: translateX(-50%);
 
+      @media screen and (max-width: 1570px) {
+        margin-top: 250px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 150px;
+      }
+
       @media screen and (max-width: 600px) {
         margin-top: 20px;
         left: 45%;
@@ -415,6 +431,14 @@ select {
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         letter-spacing: 1.15px;
+
+        @media screen and (max-width: 1570px) {
+          font-size: 24px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          font-size: 18px;
+        }
 
         @media screen and (max-width: 600px) {
           font-size: 12px;
@@ -440,6 +464,14 @@ select {
           font-size: 52px;
           font-family: 'Roboto', sans-serif;
 
+          @media screen and (max-width: 1570px) {
+            font-size: 32px;
+          }
+
+          @media screen and (max-width: 1200px) {
+            font-size: 24px;
+          }
+
           @media screen and (max-width: 600px) {
             margin-top: 14px;
             margin-left: 5px;
@@ -453,6 +485,14 @@ select {
 
             font-weight: 500;
 
+            @media screen and (max-width: 1570px) {
+              font-size: 28px;
+            }
+
+            @media screen and (max-width: 1200px) {
+              font-size: 22px;
+            }
+
             @media screen and (max-width: 600px) {
               font-size: 12px;
             }
@@ -463,6 +503,28 @@ select {
         position: relative;
         content: url(../static/image/logo.png);
         margin-top: 25px;
+
+        @media screen and (max-width: 1570px) {
+          margin-top: 10px;
+          display: inline-block;
+          height: 82px;
+          width: 82px;
+          content: '';
+          background-image: url(../static/image/logo.png);
+          background-size: contain;
+          vertical-align: middle;
+        }
+
+        @media screen and (max-width: 1200px) {
+          margin-top: 15px;
+          display: inline-block;
+          height: 64px;
+          width: 64px;
+          content: '';
+          background-image: url(../static/image/logo.png);
+          background-size: contain;
+          vertical-align: middle;
+        }
 
         @media screen and (max-width: 600px) {
           margin-top: 10px;
@@ -484,6 +546,16 @@ select {
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
 
+        @media screen and (max-width: 1570px) {
+          top: 40px;
+          font-size: 22px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          top: 30px;
+          font-size: 18px;
+        }
+
         @media screen and (max-width: 600px) {
           top: 20px;
           font-size: 14px;
@@ -504,6 +576,20 @@ select {
         width: 730px;
         height: 730px;
 
+        @media screen and (max-width: 1570px) {
+          top: -80px;
+          right: -30px;
+          width: 500px;
+          height: 500px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          top: -60px;
+          right: -20px;
+          width: 400px;
+          height: 400px;
+        }
+
         @media screen and (max-width: 600px) {
           display: none;
         }
@@ -518,6 +604,10 @@ select {
 
     height: 900px;
     width: 100%;
+
+    @media screen and (max-width: 1570px) {
+      height: 600px;
+    }
 
     @media screen and (max-width: 600px) {
       margin-top: 30px;
@@ -536,6 +626,10 @@ select {
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
+
+      @media screen and (max-width: 1570px) {
+        font-size: 22px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 30px;
@@ -580,6 +674,18 @@ select {
       content: url("../static/image/menu.png");
       margin-right: 80px;
 
+      @media screen and (max-width: 1570px) {
+        right: 40%;
+        position: relative;
+        display: inline-block;
+        width: 190px;
+        height: 380px;
+        content: '';
+        background-image: url(../static/image/menu.png);
+        background-size: contain;
+        vertical-align: middle;
+      }
+
       @media screen and (max-width: 600px) {
         position: relative;
         top: 50px;
@@ -594,6 +700,12 @@ select {
       }
     }
     .image2 {
+      @media screen and (max-width: 1570px) {
+        position: absolute;
+        width: 190px;
+        right: 0%;
+      }
+      
       @media screen and (max-width: 600px) {
         position: absolute;
         width: 95px;
@@ -771,7 +883,7 @@ select {
   .fifthPanel {
     position: relative;
     background: #F5F7FA;
-    height: 810px;
+    height: 500px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
