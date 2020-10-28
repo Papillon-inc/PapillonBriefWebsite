@@ -206,6 +206,12 @@ select {
   background: url(../static/image/triangle.png) right 50% no-repeat, linear-gradient(top, #fff 0%,#efebe1 100%);
   background-size: 20px, 100%;
 
+ //画像をselect要素内に出すための仕組み
+  background-image: url(../static/image/tri_button.png);
+  background-repeat: no-repeat;
+  background-position: 95%; /* 背景画像を若干右に移動 */
+  
+
   @media screen and (max-width: 600px) {
     margin-top: 14px;
     height: 30px;
@@ -757,6 +763,7 @@ select {
           margin-top: 20px;
           font-size: 14px;
         }
+
       }
     }
   }
