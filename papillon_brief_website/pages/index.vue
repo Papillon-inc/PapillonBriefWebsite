@@ -796,11 +796,12 @@ select {
       padding-bottom: 10px;
       color: white;
       font-size: 24px;
-      background: black;
+      //background: black;
+      background: #b5b5b5;
       border-radius: 26px;
       text-align: center;
       font-family: 'Roboto', sans-serif;
-      cursor: pointer;
+      cursor:default;
 
       @media screen and (max-width: 600px) {
         top: 25px;
