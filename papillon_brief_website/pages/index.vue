@@ -93,7 +93,7 @@
             </div>
           </div>
           <div>
-            <div class="policy">送信されたフォーム記載の情報については、当社の○○のために利用し、ご本人の事前の同意を得た場合や法令に基づく場合を除き、第三者への提供や他の目的での利用は致しません</div>
+            <div class="policy">送信されたフォーム記載の情報については、<br class="br-sp" /><br class="br-pc" />当社の○○のために利用し、<br class="br-pc" />ご本人の事前の同意を得た場合や法令に基づく場合を除き、<br class="br-sp" /><br class="br-pc" />第三者への提供や他の目的での利用は致しません</div>
             <span class="sendButton">送信する</span>
           </div>
         </div>
@@ -898,9 +898,14 @@ select {
         padding-bottom: -20px;
         font-size: 14px;
         color: #767676;
+
+        .br-pc { display:none; }
+        .br-sp { display:block; }
         @media screen and (max-width: 600px) {
           padding-top: 20px;
           font-size: 8px;
+          .br-pc { display:block; }
+          .br-sp { display:none; }
         }
       }
 
