@@ -9,7 +9,8 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    description: '株式会社Papillonは、e-sportsのプラットフォームを開発している学生ベンチャーです。'
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

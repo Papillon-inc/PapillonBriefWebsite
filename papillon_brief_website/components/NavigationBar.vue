@@ -7,7 +7,7 @@
       <span class="product">Product</span>
       <span class="news">News</span>
       <span class="contact">Contact</span>
-      <span class="info">Company Info</span>
+      <span class="info">Information</span>
     </div>
   </div>
 </template>

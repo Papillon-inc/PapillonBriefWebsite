@@ -10,7 +10,7 @@
           <span class="product">Product</span>
           <span class="news">News</span>
           <span class="contact">Contact</span>
-          <span class="info">Company Info</span>
+          <span class="info">Information</span>
         </div>
       </div>
       <img src="~/static/image/ossan_square.jpg" class="ossanSquare" />
@@ -25,7 +25,7 @@
         </div>
         <div class="content">
           <span class="eplayers">e-players</span>は、スマホ一つで<br>
-          ゲーム大会を行えるサポートツールです<br>
+          ゲーム大会を行えるサポートツールです。<br>
           運営者、プレイヤーがお互いに<br>
           より楽しんでゲーム大会を実施することができます。
         </div>
@@ -35,11 +35,12 @@
     <div class="secondPanel">
       <div class="textBlock">
         <span class="title">
-          シンプルでわかりやすく<br>
+          シンプルでわかりやすく
+          </span>
           <br>
           <br>
-        </span>
-        〇〇分であっという間にユーザー登録完了。<br>
+          <br>
+        1分35秒であっという間にユーザー登録完了。<br>
         大会に参加するための長い手続きもなし。<br>
         "<span class="highlight">面倒な手続き</span>"は、もう必要ありません。<br>
         シンプルなデザインを採用することで<br>
@@ -93,7 +94,16 @@
             </div>
           </div>
           <div>
-            <div class="policy">送信されたフォーム記載の情報については、<br class="br-sp" /><br class="br-pc" />当社の○○のために利用し、<br class="br-pc" />ご本人の事前の同意を得た場合や法令に基づく場合を除き、<br class="br-sp" /><br class="br-pc" />第三者への提供や他の目的での利用は致しません</div>
+            <div class="policy">送信されたフォーム記載の情報については、
+              <br class="br-sp" />
+              <br class="br-pc" />
+              当社の業務遂行のために利用し、
+              <br class="br-pc" />
+              ご本人の事前の同意を得た場合や法令に基づく場合を除き、
+              <br class="br-sp" />
+              <br class="br-pc" />
+              第三者への提供や他の目的での利用は致しません。
+            </div>
             <span class="sendButton" @click="sendMail">送信する</span>
           </div>
         </div>
@@ -102,7 +112,7 @@
     <div class="fifthPanel">
       <div class="title">
         <div class="purpleDot"></div>
-        Company Info
+        Information
         <div class="detail">会社情報</div>
       </div>
       <div class="info">
@@ -110,12 +120,16 @@
         <span class="content">株式会社Papillon</span>
       </div>
       <div class="info">
-        <span class="key">代表者</span>
-        <span class="content">都築亮吾</span>
+        <span class="key">創業</span>
+        <span class="content">2019年12月03日</span>
       </div>
       <div class="info">
-        <span class="key">設立</span>
-        <span class="content">2019年12月03日</span>
+        <span class="key">資本金</span>
+        <span class="content">100万円</span>
+      </div>
+      <div class="info">
+        <span class="key">代表取締役</span>
+        <span class="content">都築亮吾</span>
       </div>
       <!-- <div class="info">
         <span class="key">所在地</span>
@@ -143,24 +157,24 @@ export default {
     return {
       news: [
         {
-          "date": "2020/08/08",
-          "title": "大会配信について"
+          "date": "2019/12/03",
+          "title": "会社を設立しました"
         },
         {
-          "date": "2020/09/30",
-          "title": "大会開催"
+          "date": "2020/01/01",
+          "title": "謹賀新年 今年も精進します"
         },
         {
-          "date": "2020/10/1",
-          "title": "アップデートについて"
+          "date": "2020/03/01",
+          "title": "事務所OPEN！"
         },
         {
-          "date": "2020/10/2",
-          "title": "アップデートに伴う注意"
+          "date": "2020/11/20",
+          "title": "順調にプロダクトの開発が進んでいます！"
         },
         {
-          "date": "2020/10/15",
-          "title": "大会中止のお知らせ"
+          "date": "2020/11/29",
+          "title": "サイトリニューアルのお知らせ"
         }
       ]
     }
@@ -445,7 +459,7 @@ select {
         position: relative;
         color: #212121;
         font-size: 32px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         font-weight: 700;
         letter-spacing: 1.15px;
 
@@ -499,6 +513,7 @@ select {
             color: #212121;
             font-size: 36px;
             margin-left: 2px;
+            font-family: 'Noto Sans JP', sans-serif;
 
             font-weight: 500;
 
@@ -558,29 +573,34 @@ select {
       .content {
         position: relative;
         top: 65px;
-        color: #767676;
+        color: #555;
         font-size: 28px;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         font-weight: 500;
+        line-height: 29px;
 
         @media screen and (max-width: 1570px) {
           top: 40px;
           font-size: 22px;
+          line-height: 23px;
         }
 
         @media screen and (max-width: 1200px) {
           top: 30px;
-          font-size: 18px;
+          font-size: 21px;
+          line-height: 26px;
         }
 
         @media screen and (max-width: 600px) {
           top: 20px;
           font-size: 14px;
+          line-height: 19px;
           margin-bottom: 30px;
         }
 
         .eplayers {
           color: #BE2B50;
+          font-family: 'Noto Sans JP', sans-serif;
           margin-right: 3px;
         }
       }
@@ -617,6 +637,7 @@ select {
   .secondPanel {
     position: relative;
     margin-top: 80px;
+    padding-left: 15px;
     background: #7565E1;
 
     height: 1000px;
@@ -638,7 +659,8 @@ select {
       left: 10%;
       color: white;
       font-size: 28px;
-      font-family: 'Roboto', sans-serif;
+      line-height: 35px;
+      font-family: 'Noto Sans JP', sans-serif;
 
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
@@ -646,12 +668,14 @@ select {
 
       @media screen and (max-width: 1570px) {
         font-size: 22px;
+        line-height: 29px;
       }
 
       @media screen and (max-width: 600px) {
         top: 30px;
         left: 16px;
         font-size: 14px;
+        line-height: 18px;
 
         transform: translateY(0%);
         -webkit-transform: translateY(0%);
@@ -661,9 +685,10 @@ select {
       .title {
         font-weight: 700;
         font-size: 36px;
+        font-family: 'Roboto', sans-serif;
 
         @media screen and (max-width: 600px) {
-          font-size: 18px;
+          font-size: 22px;
         }
       }
 
@@ -706,10 +731,10 @@ select {
       @media screen and (max-width: 600px) {
         position: relative;
         top: 50px;
-        left: 120px;
+        left: 140px;
         display: inline-block;
-        width: 95px;
-        height: 190px;
+        width: 110px;
+        height: 220px;
         content: '';
         background-image: url(../static/image/menu.png);
         background-size: contain;
@@ -720,12 +745,14 @@ select {
       @media screen and (max-width: 1570px) {
         position: absolute;
         width: 190px;
+        height: 380px;
         right: 0%;
       }
       
       @media screen and (max-width: 600px) {
         position: absolute;
-        width: 95px;
+        width: 110px;
+        height: 220px;
         top: 49px;
         left: 16px;
       }
@@ -736,6 +763,10 @@ select {
     position: relative;
     height: 850px;
     background: white;
+
+    @media screen and (max-width: 1570px) {
+      height: 750px;
+    }
 
     @media screen and (max-width: 600px) {
       height: 350px;
@@ -749,6 +780,10 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 1570px) {
+        left: 152px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 30px;
@@ -764,7 +799,11 @@ select {
 
       color: #767676;
       font-size: 28px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
+
+      @media screen and (max-width: 1570px) {
+        margin-bottom: 75px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 5px;
@@ -817,7 +856,7 @@ select {
       background: #b5b5b5;
       border-radius: 26px;
       text-align: center;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       cursor:default;
 
       @media screen and (max-width: 600px) {
@@ -836,6 +875,10 @@ select {
     height: 1340px;
     width: 100%;
 
+    @media screen and (max-width: 1570px) {
+      height: 1260px;
+    }
+
     @media screen and (max-width: 600px) {
       height: 650px;
     }
@@ -848,6 +891,10 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 1570px) {
+        left: 152px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 30px;
@@ -862,7 +909,7 @@ select {
 
       color: #767676;
       font-size: 28px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
 
       @media screen and (max-width: 600px) {
         top: 5px;
@@ -876,6 +923,10 @@ select {
       position: relative;
       top: 80px;
       left: -24px;
+
+      @media screen and (max-width: 1570px) {
+        top: 55px;
+      }
 
       .sendButton{
         position: relative;
@@ -892,17 +943,17 @@ select {
         background: #7565e1;
         border-radius: 26px;
         text-align: center;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
         cursor: pointer;
 
         @media screen and (max-width: 600px) {
-        top: 25px;
-        height: 20px;
-        width: auto;
-        padding-left: 35px;
-        padding-right: 35px;
-        font-size: 12px;
-      }
+          top: 25px;
+          height: 20px;
+          width: auto;
+          padding-left: 35px;
+          padding-right: 35px;
+          font-size: 12px;
+        }
       }
 
       .policy{
@@ -932,7 +983,7 @@ select {
         margin-top: 30px;
         font-size: 26px;
         font-weight: 500;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Noto Sans JP', sans-serif;
 
         @media screen and (max-width: 600px) {
           margin-top: 20px;
@@ -950,7 +1001,7 @@ select {
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 230px;
+      height: 270px;
     }
 
     .title {
@@ -962,6 +1013,10 @@ select {
       color: #212121;
       font-size: 30px;
       font-family: 'Roboto', sans-serif;
+
+      @media screen and (max-width: 1570px) {
+        left: 152px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 30px;
@@ -977,7 +1032,7 @@ select {
 
       color: #767676;
       font-size: 28px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
 
       @media screen and (max-width: 600px) {
         top: 5px;
@@ -989,8 +1044,12 @@ select {
 
     .info {
       position: relative;
-      left: 200px;
+      left: 176px;
       margin-top: 40px;
+
+      @media screen and (max-width: 1570px) {
+        left: 130px;
+      }
 
       @media screen and (max-width: 600px) {
         left: 5%;
@@ -1008,7 +1067,7 @@ select {
       }
       .content {
         position: absolute;
-        left: 120px;
+        left: 170px;
         color: #212121;
         font-size: 26px;
 
