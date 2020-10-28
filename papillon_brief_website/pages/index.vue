@@ -808,7 +808,7 @@ select {
       cursor:default;
 
       @media screen and (max-width: 600px) {
-        top: 25px;
+        top:25px;
         height: 20px;
         width: auto;
         padding-left: 35px;
@@ -824,7 +824,7 @@ select {
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 500px;
+      height: 650px;
     }
 
     .title {
@@ -881,6 +881,15 @@ select {
         text-align: center;
         font-family: 'Roboto', sans-serif;
         cursor:default;
+
+        @media screen and (max-width: 600px) {
+        top: 25px;
+        height: 20px;
+        width: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 12px;
+      }
       }
 
       .policy{
@@ -889,6 +898,10 @@ select {
         padding-bottom: -20px;
         font-size: 14px;
         color: #767676;
+        @media screen and (max-width: 600px) {
+          padding-top: 20px;
+          font-size: 8px;
+        }
       }
 
       @media screen and (max-width: 600px) {
