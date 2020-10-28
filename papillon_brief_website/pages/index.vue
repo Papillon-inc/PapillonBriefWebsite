@@ -92,6 +92,10 @@
               </select>
             </div>
           </div>
+          <div>
+            <div class="policy">送信されたフォーム記載の情報については、当社の○○のために利用し、ご本人の事前の同意を得た場合や法令に基づく場合を除き、第三者への提供や他の目的での利用は致しません</div>
+            <span class="sendButton">送信する</span>
+          </div>
         </div>
       </div>
     </div>
@@ -602,7 +606,7 @@ select {
     margin-top: 80px;
     background: #7565E1;
 
-    height: 900px;
+    height: 1000px;
     width: 100%;
 
     @media screen and (max-width: 1570px) {
@@ -717,7 +721,7 @@ select {
 
   .thirdPanel {
     position: relative;
-    height: 750px;
+    height: 850px;
     background: white;
 
     @media screen and (max-width: 600px) {
@@ -804,7 +808,7 @@ select {
       cursor:default;
 
       @media screen and (max-width: 600px) {
-        top: 25px;
+        top:25px;
         height: 20px;
         width: auto;
         padding-left: 35px;
@@ -816,11 +820,11 @@ select {
 
   .fourthPanel {
     position: relative;
-    height: 1140px;
+    height: 1340px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 500px;
+      height: 650px;
     }
 
     .title {
@@ -860,6 +864,46 @@ select {
       top: 80px;
       left: -24px;
 
+      .sendButton{
+        position: relative;
+        top: 50px;
+        height: 60px;
+        width: auto;
+        padding-left: 110px;
+        padding-right: 110px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        font-size: 24px;
+        //background: black;
+        background: #7565e1;
+        border-radius: 26px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        cursor:default;
+
+        @media screen and (max-width: 600px) {
+        top: 25px;
+        height: 20px;
+        width: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+        font-size: 12px;
+      }
+      }
+
+      .policy{
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: -20px;
+        font-size: 14px;
+        color: #767676;
+        @media screen and (max-width: 600px) {
+          padding-top: 20px;
+          font-size: 8px;
+        }
+      }
+
       @media screen and (max-width: 600px) {
         top: 10px;
         left: -14px;
@@ -884,7 +928,7 @@ select {
   .fifthPanel {
     position: relative;
     background: #F5F7FA;
-    height: 500px;
+    height: 600px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
