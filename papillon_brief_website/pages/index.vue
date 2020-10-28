@@ -16,7 +16,7 @@
       <img src="~/static/image/ossan_square.jpg" class="ossanSquare" />
       <div class="textBlock">
         <span class="toSport">
-          遊びからスポーツへ
+          <h1>遊びからスポーツへ</h1>
         </span>
         <div class="eplayersPos">
           <span class="eplayers">
@@ -94,7 +94,7 @@
           </div>
           <div>
             <div class="policy">送信されたフォーム記載の情報については、<br class="br-sp" /><br class="br-pc" />当社の○○のために利用し、<br class="br-pc" />ご本人の事前の同意を得た場合や法令に基づく場合を除き、<br class="br-sp" /><br class="br-pc" />第三者への提供や他の目的での利用は致しません</div>
-            <span class="sendButton">送信する</span>
+            <span class="sendButton" @click="sendMail">送信する</span>
           </div>
         </div>
       </div>
@@ -132,6 +132,7 @@
 <script>
 import Navigation from '~/components/NavigationBar.vue'
 import Footer from '~/components/Footer.vue'
+import firebase from "~/plugins/firebase.js"
 
 export default {
   components: {
@@ -162,6 +163,18 @@ export default {
           "title": "大会中止のお知らせ"
         }
       ]
+    }
+  },
+  methods: {
+    sendMail() {
+      const send = firebase.functions().httpsCallable("sendMail");
+      send("test")
+      .then(function(data) {
+        alert("送信しました。");
+      })
+      .catch(function(error) {
+        alert("送信に失敗しました。");
+      })
     }
   }
 }
@@ -880,7 +893,7 @@ select {
         border-radius: 26px;
         text-align: center;
         font-family: 'Roboto', sans-serif;
-        cursor:default;
+        cursor: pointer;
 
         @media screen and (max-width: 600px) {
         top: 25px;
