@@ -211,6 +211,11 @@ input {
   background: #f6f6f6;
   border: none;
 
+  @media screen and (max-width: 1000px) {
+    height: 50px;
+    font-size: 20px;
+  }
+
   @media screen and (max-width: 600px) {
     margin-top: 14px;
     height: 30px;
@@ -242,6 +247,10 @@ select {
   background-repeat: no-repeat;
   background-position: 95%; /* 背景画像を若干右に移動 */
   
+  @media screen and (max-width: 1000px) {
+    height: 50px;
+    font-size: 20px;
+  }
 
   @media screen and (max-width: 600px) {
     margin-top: 14px;
@@ -298,6 +307,10 @@ select {
       height: 600px;
     }
 
+    @media screen and (max-width: 1000px) {
+      height: 550px;
+    }
+
     @media screen and (max-width: 600px) {
       height: 500px;
     }
@@ -329,6 +342,11 @@ select {
           height: 80px;
           width: 80px;
 
+          @media screen and (max-width: 1000px) {
+            width: 48px;
+            height: 48px;
+          }
+
           @media screen and (max-width: 600px) {
             width: 26px;
             height: 26px;
@@ -346,6 +364,11 @@ select {
         font-family: 'Roboto', sans-serif;
         color: #212121;
 
+        @media screen and (max-width: 1000px) {
+          top: 10px;
+          font-size: 28px;
+        }
+
         @media screen and (max-width: 600px) {
           top: 6px;
           margin-left: 3px;
@@ -360,6 +383,10 @@ select {
         right: 5%;
         color: #767676;
 
+        @media screen and (max-width: 1000px) {
+          top: 10px;
+        }
+
         @media screen and (max-width: 600px) {
           top: 2px;
         }
@@ -371,6 +398,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 1000px) {
+            right: 36px;
+            font-size: 24px;
+          }
 
           @media screen and (max-width: 600px) {
             right: 16px;
@@ -386,6 +418,11 @@ select {
           text-align: right;
           cursor: pointer;
 
+          @media screen and (max-width: 1000px) {
+            right: 27px;
+            font-size: 24px;
+          }
+
           @media screen and (max-width: 600px) {
             right: 12px;
             font-size: 12px;
@@ -400,6 +437,11 @@ select {
           text-align: right;
           cursor: pointer;
 
+          @media screen and (max-width: 1000px) {
+            right: 18px;
+            font-size: 24px;
+          }
+
           @media screen and (max-width: 600px) {
             right: 8px;
             font-size: 12px;
@@ -412,6 +454,11 @@ select {
           font-weight: 500;
           text-align: right;
           cursor: pointer;
+
+          @media screen and (max-width: 1000px) {
+            right: 9px;
+            font-size: 24px;
+          }
 
           @media screen and (max-width: 600px) {
             right: 4px;
@@ -450,6 +497,11 @@ select {
         margin-top: 150px;
       }
 
+      @media screen and (max-width: 1000px) {
+        right: 9px;
+        font-size: 24px;
+      }
+
       @media screen and (max-width: 600px) {
         margin-top: 20px;
         left: 45%;
@@ -469,6 +521,10 @@ select {
 
         @media screen and (max-width: 1200px) {
           font-size: 18px;
+        }
+
+        @media screen and (max-width: 1000px) {
+          font-size: 14px;
         }
 
         @media screen and (max-width: 600px) {
@@ -503,6 +559,10 @@ select {
             font-size: 24px;
           }
 
+          @media screen and (max-width: 1000px) {
+            font-size: 20px;
+          }
+
           @media screen and (max-width: 600px) {
             margin-top: 14px;
             margin-left: 5px;
@@ -523,6 +583,10 @@ select {
 
             @media screen and (max-width: 1200px) {
               font-size: 22px;
+            }
+
+            @media screen and (max-width: 1000px) {
+              font-size: 18px;
             }
 
             @media screen and (max-width: 600px) {
@@ -552,6 +616,17 @@ select {
           display: inline-block;
           height: 64px;
           width: 64px;
+          content: '';
+          background-image: url(../static/image/logo.png);
+          background-size: contain;
+          vertical-align: middle;
+        }
+
+        @media screen and (max-width: 1000px) {
+          margin-top: 15px;
+          display: inline-block;
+          height: 52px;
+          width: 52px;
           content: '';
           background-image: url(../static/image/logo.png);
           background-size: contain;
@@ -591,6 +666,12 @@ select {
           line-height: 26px;
         }
 
+        @media screen and (max-width: 1000px) {
+          top: 35px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+
         @media screen and (max-width: 600px) {
           top: 20px;
           font-size: 14px;
@@ -627,6 +708,13 @@ select {
           height: 400px;
         }
 
+        @media screen and (max-width: 1000px) {
+          top: -50px;
+          right: -15px;
+          width: 350px;
+          height: 350px;
+        }
+
         @media screen and (max-width: 600px) {
           display: none;
         }
@@ -645,6 +733,10 @@ select {
 
     @media screen and (max-width: 1570px) {
       height: 600px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      height: 560px;
     }
 
     @media screen and (max-width: 600px) {
@@ -671,6 +763,11 @@ select {
         line-height: 29px;
       }
 
+      @media screen and (max-width: 1000px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
       @media screen and (max-width: 600px) {
         top: 30px;
         left: 16px;
@@ -686,6 +783,10 @@ select {
         font-weight: 700;
         font-size: 36px;
         font-family: 'Roboto', sans-serif;
+
+        @media screen and (max-width: 1000px) {
+          font-size: 28px;
+        }
 
         @media screen and (max-width: 600px) {
           font-size: 22px;
@@ -728,6 +829,18 @@ select {
         vertical-align: middle;
       }
 
+      @media screen and (max-width: 1000px) {
+        right: 40%;
+        position: relative;
+        display: inline-block;
+        width: 170px;
+        height: 340px;
+        content: '';
+        background-image: url(../static/image/menu.png);
+        background-size: contain;
+        vertical-align: middle;
+      }
+
       @media screen and (max-width: 600px) {
         position: relative;
         top: 50px;
@@ -746,6 +859,13 @@ select {
         position: absolute;
         width: 190px;
         height: 380px;
+        right: 0%;
+      }
+
+      @media screen and (max-width: 1000px) {
+        position: absolute;
+        width: 170px;
+        height: 340px;
         right: 0%;
       }
       
@@ -768,6 +888,10 @@ select {
       height: 750px;
     }
 
+    @media screen and (max-width: 1000px) {
+      height: 500px;
+    }
+
     @media screen and (max-width: 600px) {
       height: 350px;
     }
@@ -785,12 +909,18 @@ select {
         left: 152px;
       }
 
+      @media screen and (max-width: 1000px) {
+        top: 50px;
+        font-size: 26px;
+      }
+
       @media screen and (max-width: 600px) {
         top: 30px;
         left: 30px;
         font-size: 20px;
       }
     }
+
     .detail {
       position: relative;
       top: 10px;
@@ -803,6 +933,11 @@ select {
 
       @media screen and (max-width: 1570px) {
         margin-bottom: 75px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        font-size: 24px;
+        margin-bottom: 60px;
       }
 
       @media screen and (max-width: 600px) {
@@ -820,6 +955,11 @@ select {
       margin-top: 36px;
       left: -24px;
       cursor: pointer;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 20px;
+        margin-top: 24px;
+      }
 
       @media screen and (max-width: 600px) {
         font-size: 14px;
@@ -859,6 +999,11 @@ select {
       font-family: 'Noto Sans JP', sans-serif;
       cursor:default;
 
+      @media screen and (max-width: 1000px) {
+        top: 30px;
+        height: 40px;
+      }
+
       @media screen and (max-width: 600px) {
         top:25px;
         height: 20px;
@@ -879,6 +1024,10 @@ select {
       height: 1260px;
     }
 
+    @media screen and (max-width: 1000px) {
+      height: 900px;
+    }
+
     @media screen and (max-width: 600px) {
       height: 650px;
     }
@@ -896,6 +1045,11 @@ select {
         left: 152px;
       }
 
+      @media screen and (max-width: 1000px) {
+        top: 50px;
+        font-size: 26px;
+      }
+
       @media screen and (max-width: 600px) {
         top: 30px;
         left: 30px;
@@ -910,6 +1064,11 @@ select {
       color: #767676;
       font-size: 28px;
       font-family: 'Noto Sans JP', sans-serif;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 24px;
+        margin-bottom: 60px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 5px;
@@ -926,6 +1085,10 @@ select {
 
       @media screen and (max-width: 1570px) {
         top: 55px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        top: 30px;
       }
 
       .sendButton{
@@ -985,11 +1148,15 @@ select {
         font-weight: 500;
         font-family: 'Noto Sans JP', sans-serif;
 
+        @media screen and (max-width: 1000px) {
+          margin-top: 25px;
+          font-size: 22px;
+        }
+
         @media screen and (max-width: 600px) {
           margin-top: 20px;
           font-size: 14px;
         }
-
       }
     }
   }
@@ -1018,6 +1185,11 @@ select {
         left: 152px;
       }
 
+      @media screen and (max-width: 1000px) {
+        top: 70px;
+        font-size: 28px;
+      }
+
       @media screen and (max-width: 600px) {
         top: 30px;
         left: 30px;
@@ -1033,6 +1205,10 @@ select {
       color: #767676;
       font-size: 28px;
       font-family: 'Noto Sans JP', sans-serif;
+
+      @media screen and (max-width: 1000px) {
+        font-size: 24px;
+      }
 
       @media screen and (max-width: 600px) {
         top: 5px;
@@ -1061,6 +1237,10 @@ select {
         color: #767676;
         font-size: 26px;
 
+        @media screen and (max-width: 1000px) {
+          font-size: 20px;
+        }
+
         @media screen and (max-width: 600px) {
           font-size: 14px;
         }
@@ -1071,11 +1251,16 @@ select {
         color: #212121;
         font-size: 26px;
 
+        @media screen and (max-width: 1000px) {
+          font-size: 20px;
+        }
+
         @media screen and (max-width: 600px) {
           font-size: 14px;
         }
       }
     }
+
     .map {
       position: absolute;
       right: 10%;
