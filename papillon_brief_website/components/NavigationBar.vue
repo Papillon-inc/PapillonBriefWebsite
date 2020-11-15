@@ -4,15 +4,34 @@
       <img src="~/static/image/papillon.png" class="papillonImg" />
     </div>
     <div class="menu">
-      <span class="product">Product</span>
-      <span class="news">News</span>
-      <span class="contact">Contact</span>
-      <span class="info">Information</span>
+      <span class="product" @click="product">Product</span>
+      <span class="news" @click="news">News</span>
+      <span class="contact" @click="contact">Contact</span>
+      <span class="info" @click="information">Information</span>
     </div>
   </div>
 </template>
 
 <script>
+export default {
+  methods:{
+    product: function(){
+      this.$emit("product")
+    },
+
+    news: function(){
+      this.$emit("news")
+    },
+
+    contact: function(){
+      this.$emit("contact")
+    },
+
+    information: function(){
+      this.$emit("information")
+    }
+  },
+}
 </script>
 
 <style scoped lang="scss">

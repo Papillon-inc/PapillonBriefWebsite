@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <Navigation class="navi"/>
+    <Navigation class="navi" @product="product_scroll" @news="news_scroll" @contact="contact_scroll" @information="information_scroll"/>
     <div class="firstPanel">
       <div class="bar">
         <div class="papillon">
           <img src="~/static/image/papillon.png" class="logo" />
         </div>
         <div class="menu">
-          <span class="product">Product</span>
-          <span class="news">News</span>
-          <span class="contact">Contact</span>
-          <span class="info">Information</span>
+          <span class="product" @click="product_scroll">Product</span>
+          <span class="news" @click="news_scroll">News</span>
+          <span class="contact" @click="contact_scroll">Contact</span>
+          <span class="info" @click="information_scroll">Information</span>
         </div>
       </div>
       <img src="~/static/image/ossan_square.jpg" class="ossanSquare" />
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="thirdPanel">
-      <div class="title">
+      <div class="title" id="news">
         <div class="purpleDot"></div>
         News
         <div class="detail">当社の様々な情報を素早くお届け致します。</div>
@@ -176,8 +176,12 @@ export default {
           "date": "2020/11/29",
           "title": "サイトリニューアルのお知らせ"
         }
-      ]
+      ],
+      navi:""
     }
+  },
+  mounted: function(){
+    this.navi = document.getElementsByClassName("navi")[0];
   },
   methods: {
     sendMail() {
@@ -189,6 +193,30 @@ export default {
       .catch(function(error) {
         alert("送信に失敗しました。");
       })
+    },
+
+    product_scroll: function(){
+      let rect
+      rect = document.getElementsByClassName("firstPanel")[0].getBoundingClientRect();
+      window.scroll(0,window.pageYOffset + rect.top)
+    },
+
+    news_scroll: function(){
+      let rect
+      rect = document.getElementsByClassName("thirdPanel")[0].getBoundingClientRect();
+      window.scroll(0,window.pageYOffset + rect.top - this.navi.clientHeight)
+    },
+
+    contact_scroll: function(){
+      let rect
+      rect = document.getElementsByClassName("fourthPanel")[0].getBoundingClientRect();
+      window.scroll(0,window.pageYOffset + rect.top - this.navi.clientHeight)
+    },
+
+    information_scroll: function(){
+      let rect
+      rect = document.getElementsByClassName("fifthPanel")[0].getBoundingClientRect();
+      window.scroll(0,window.pageYOffset + rect.top - this.navi.clientHeight)
     }
   }
 }
