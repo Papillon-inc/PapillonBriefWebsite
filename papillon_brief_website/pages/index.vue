@@ -131,6 +131,10 @@
         <span class="key">代表取締役</span>
         <span class="content">都築亮吾</span>
       </div>
+      <div class="info">
+        <span class="key">専務取締役</span>
+        <span class="content">久野聡一郎</span>
+      </div>
       <!-- <div class="info">
         <span class="key">所在地</span>
         <span class="content">愛知県豊田市栄町 4-2-9</span>
