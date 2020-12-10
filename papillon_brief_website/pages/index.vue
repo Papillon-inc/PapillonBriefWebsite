@@ -4,7 +4,7 @@
     <div class="firstPanel">
       <div class="bar">
         <div class="papillon">
-          <img src="~/static/image/papillon.png" class="logo" />
+          <img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
         </div>
         <div class="menu">
           <span class="product" @click="product_scroll">Product</span>
@@ -13,7 +13,7 @@
           <span class="info" @click="information_scroll">Information</span>
         </div>
       </div>
-      <img src="~/static/image/ossan_square.jpg" class="ossanSquare" />
+      <img src="~/static/image/ossan_square.jpg" class="ossanSquare" alt="esport tournament" />
       <div class="textBlock">
         <span class="toSport">
           <h1>遊びからスポーツへ</h1>
@@ -29,7 +29,7 @@
           運営者、プレイヤーがお互いに<br>
           より楽しんでゲーム大会を実施することができます。
         </div>
-        <img src="~/static/image/ossan.png" class="ossan" />
+        <img src="~/static/image/ossan.png" class="ossan" alt="esport tournament"/>
       </div>
     </div>
     <div class="secondPanel">
@@ -47,7 +47,7 @@
         アプリ内に難しい操作はありません。
       </div>
       <div class="image">
-        <img src="~/static/image/chat.png" class="image2" />
+        <img src="~/static/image/chat.png" class="image2" alt ="e-players" />
       </div>
     </div>
     <div class="thirdPanel">
@@ -1196,11 +1196,11 @@ select {
   .fifthPanel {
     position: relative;
     background: #F5F7FA;
-    height: 600px;
+    height: 620px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 270px;
+      height: 300px;
     }
 
     .title {

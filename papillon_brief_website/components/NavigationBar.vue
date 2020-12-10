@@ -1,7 +1,7 @@
 <template>
   <div class="navigationBar">
     <div class="papillonPos">
-      <img src="~/static/image/papillon.png" class="papillonImg" />
+      <img src="~/static/image/papillon.png" class="papillonImg" alt="papillon" />
     </div>
     <div class="menu">
       <span class="product" @click="product">Product</span>
