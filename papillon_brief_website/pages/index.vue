@@ -72,21 +72,21 @@
         <div class="forms">
           <div class="topic">
             会社名<br>
-            <input type="text" placeholder="例:株式会社Papillon" /><br>
+            <input type="text" placeholder="例:株式会社Papillon" aria-label="会社名" /><br>
           </div>
           <div class="topic">
             お名前<br>
-            <input type="text" placeholder="姓" class="shortInput" /><br>
-            <input type="text" placeholder="名" class="shortInput" /><br>
+            <input type="text" placeholder="姓" class="shortInput" aria-label="姓" /><br>
+            <input type="text" placeholder="名" class="shortInput" aria-label="名" /><br>
           </div>
           <div class="topic">
             メールアドレス<br>
-            <input type="text" placeholder="例:papillon@domain.com" />
+            <input type="text" placeholder="例:papillon@domain.com" aria-label="メールアドレス" />
           </div>
           <div class="topic">
             お問い合わせ内容<br>
             <div class="selectWrap">
-              <select name="inquiry">
+              <select name="inquiry" aria-label="問い合わせ">
                 <option selected="true" disabled="disabled">選択してください...</option>
                 <option value="question">質問</option>
                 <option value="idea">意見</option>
@@ -129,11 +129,19 @@
       </div>
       <div class="info">
         <span class="key">代表取締役</span>
-        <span class="content">都築亮吾</span>
+        <span class="content">都築 亮吾</span>
       </div>
       <div class="info">
         <span class="key">専務取締役</span>
-        <span class="content">久野聡一郎</span>
+        <span class="content">久野 聡一郎</span>
+      </div>
+      <div class="info">
+        <span class="key">取締役</span>
+        <span class="content">永田 修大</span>
+      </div>
+      <div class="info">
+        <span class="key">取締役</span>
+        <span class="content">前田 幸希</span>
       </div>
       <!-- <div class="info">
         <span class="key">所在地</span>
@@ -1196,11 +1204,11 @@ select {
   .fifthPanel {
     position: relative;
     background: #F5F7FA;
-    height: 620px;
+    height: 740px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 300px;
+      height: 380px;
     }
 
     .title {

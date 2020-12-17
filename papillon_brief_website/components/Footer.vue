@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="text">
-      <span class="copyright">@2020 Papillon, Inc</span>
+      <span class="copyright">@2020 Papillon Inc</span>
       <!-- <font-awesome-icon :icon="['fab', 'twitter']" class="twitter" /> -->
       <span class="papillon">@Papillon</span>
     </div>
