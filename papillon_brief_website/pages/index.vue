@@ -139,10 +139,6 @@
         <span class="key">取締役</span>
         <span class="content">永田 修大</span>
       </div>
-      <div class="info">
-        <span class="key">取締役</span>
-        <span class="content">前田 幸希</span>
-      </div>
       <!-- <div class="info">
         <span class="key">所在地</span>
         <span class="content">愛知県豊田市栄町 4-2-9</span>
@@ -1204,7 +1200,7 @@ select {
   .fifthPanel {
     position: relative;
     background: #F5F7FA;
-    height: 740px;
+    height: 670px;
     width: 100%;
 
     @media screen and (max-width: 600px) {
