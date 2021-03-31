@@ -141,7 +141,7 @@
       </div>
       <div class="info">
         <span class="key">所在地</span>
-        <span class="content">愛知県名古屋市中村区平池町4-60-12 グローバルゲート名古屋11F</span>
+        <span class="content">愛知県名古屋市中村区平池町4-60-12 11階 weworkグローバルゲート名古屋 内</span>
       </div>
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.333949226142!2d137.14966815130126!3d35.09837118023784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a00bc6c4a4a5%3A0x2363a3d5f0bd8e02!2z44CSNDcxLTAwNjYg5oSb55-l55yM6LGK55Sw5biC5qCE55S677yS5LiB55uu77yZ4oiS77yRIOOCteOCq-OCqOe-veW5uA!5e0!3m2!1sja!2sjp!4v1603384880793!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"
       class="map">
