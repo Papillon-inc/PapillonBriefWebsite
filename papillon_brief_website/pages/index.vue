@@ -1209,7 +1209,7 @@ select {
     width: 100%;
 
     @media screen and (max-width: 600px) {
-      height: 380px;
+      height: 400px;
     }
 
     .title {
@@ -1238,6 +1238,7 @@ select {
         margin-bottom: 55px;
       }
     }
+
     .detail {
       position: relative;
       top: 10px;
@@ -1286,8 +1287,10 @@ select {
           font-size: 14px;
         }
       }
+
       .content {
         position: absolute;
+        margin-right: 35px;
         left: 170px;
         color: #212121;
         font-size: 26px;
