@@ -61,7 +61,11 @@
             <span class="bannerTitle">{{n.title}}</span>
           </div>
         </div>
-        <span class="seeDetail">詳しく見る</span>
+        <nuxt-link to="news">
+          <span class="seeDetail">
+            詳しく見る
+          </span>
+        </nuxt-link>
       </div>
     </div>
     <div class="fourthPanel">
@@ -187,7 +191,11 @@ export default {
         {
           "date": "2021/03/26",
           "title": "ステーションAIに入居"
-        }
+        },
+				{
+					"date": "2021/04/14",
+					"title": "利用規約を掲載"
+				}
       ],
       navi:""
     }
@@ -1021,6 +1029,11 @@ select {
       }
     }
 
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+
     .seeDetail {
       position: relative;
       top: 50px;
@@ -1032,8 +1045,9 @@ select {
       padding-bottom: 10px;
       color: white;
       font-size: 24px;
-      //background: black;
-      background: #b5b5b5;
+      background: black;
+      cursor: pointer;
+      //background: #b5b5b5;
       border-radius: 26px;
       text-align: center;
       font-family: 'Noto Sans JP', sans-serif;
