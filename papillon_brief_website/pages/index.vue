@@ -55,7 +55,7 @@
         <div class="purpleDot"></div>
         News
         <div class="detail">当社の様々な情報を素早くお届け致します。</div>
-        <div v-for="n in news" :key="n">
+        <div v-for="n in news.slice(0, 5)" :key="n">
           <div class="banner">
             <span class="bannerDate">{{n.date}}</span>
             <span class="bannerTitle">{{n.title}}</span>
