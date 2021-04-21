@@ -16,6 +16,8 @@
 		<nuxt-link to="terms_of_use">利用規約</nuxt-link>
 		<br>
 		<nuxt-link to="privacy_policy">プライバシーポリシー</nuxt-link>
+		<br>
+		<nuxt-link to="help">ヘルプ</nuxt-link>
 	</div>
 </template>
 
