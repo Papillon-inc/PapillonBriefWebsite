@@ -76,16 +76,16 @@
         <div class="forms">
           <div class="topic">
             会社名<br>
-            <input type="text" placeholder="例:株式会社Papillon" aria-label="会社名" /><br>
+            <bold-text-input placeholder="会社名" areaLabel="会社名" /><br>
           </div>
           <div class="topic">
             お名前<br>
-            <input type="text" placeholder="姓" class="shortInput" aria-label="姓" /><br>
-            <input type="text" placeholder="名" class="shortInput" aria-label="名" /><br>
+            <bold-text-input placeholder="姓" areaLabel="姓" /><br>
+            <bold-text-input placeholder="名" areaLabel="名" /><br>
           </div>
           <div class="topic">
             メールアドレス<br>
-            <input type="text" placeholder="例:papillon@domain.com" aria-label="メールアドレス" />
+            <bold-text-input placeholder="メールアドレス" areaLabel="メールアドレス" />
           </div>
           <div class="topic">
             お問い合わせ内容<br>
@@ -157,13 +157,15 @@
 
 <script>
 import Navigation from '~/components/NavigationBar.vue'
+import BoldTextInput from '~/components/BoldTextInput.vue'
 import Footer from '~/components/Footer.vue'
 import firebase from "~/plugins/firebase.js"
 
 export default {
   components: {
     Navigation,
-    Footer
+    Footer,
+    BoldTextInput
   },
   data() {
     return {
@@ -272,6 +274,7 @@ input {
     font-size: 14px;
   }
 }
+
 
 //FIXME: 三角形を出したい
 select {
