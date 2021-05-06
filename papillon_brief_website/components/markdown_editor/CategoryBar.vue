@@ -5,6 +5,7 @@
             <li v-for="(n, i) in categories" :key="n" class="category" @click="selectCategory(i)">
                 {{ n }}
             </li>
+            <li>+</li>
         </ul>
     </div>
 </template>
@@ -75,6 +76,15 @@ export default {
             border-radius: 100px;
             background: #E16565;
             color: white;
+        }
+
+        li:last-child {
+            font-size: 16px;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #ccc;
+            cursor: pointer;
         }
     }
 }
