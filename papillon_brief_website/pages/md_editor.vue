@@ -6,12 +6,15 @@
                 <category-bar />
                 <div class="txt-content">
                     <div class="title">
-                        <input type="text" placeholder="タイトル" />
+                        <input type="text" placeholder="タイトル" v-model="titleStr" />
                     </div>
                     <textarea v-model="markdown" placeholder="本文" />
                 </div>
             </div>
             <div class="right-pane">
+                <div class="title">
+                    {{ titleStr }}
+                </div>
                 <div v-html="$md.render(markdown)" class="md"></div>
             </div>
         </div>
@@ -28,23 +31,22 @@ export default {
         CategoryBar
     },
     data() {
-        const markdown = `
-# AASDF
-## asdf
-`
         return {
-            markdown
+            markdown: "",
+            titleStr: ""
         }
     }
 }
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 .container {
     position: relative;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 
     .grid {
         position: relative;
@@ -101,7 +103,23 @@ export default {
         .right-pane {
             grid-row: 1;
             grid-column: 2;
-            background: yellow;
+            background: #FAFAFA;
+            padding: 60px;
+            overflow-y: scroll;
+
+            .title {
+                font-weight: 500;
+                color: #212121;
+                font-size: 36px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .md {
+                margin-top: 50px;
+                color: #212121;
+                font-size: 24px;
+                font-family: 'Roboto', sans-serif;
+            }
         }
     }
 }
