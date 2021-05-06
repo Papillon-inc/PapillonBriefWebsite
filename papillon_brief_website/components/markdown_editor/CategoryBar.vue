@@ -2,7 +2,7 @@
     <div class="category_bar">
         <ul>
             <li>カテゴリー：<li>
-            <li v-for="n in categories" :key="n" class="category">
+            <li v-for="(n, i) in categories" :key="n" class="category" @click="selectCategory(i)">
                 {{ n }}
             </li>
         </ul>
@@ -19,11 +19,17 @@ export default {
         }
     },
     methods: {
+        selectCategory(n) {
+            const selectedCategory = document.getElementsByClassName('selected')[0]
+            selectedCategory.classList.remove("selected")
 
+            const firstCategory = document.getElementsByClassName('category')[n]
+            firstCategory.classList.add("selected")
+        }
     },
     mounted() {
-        const firstCategory = document.getElementsByClassName('category')[0];
-        firstCategory.classList.add("selected");
+        const firstCategory = document.getElementsByClassName('category')[0]
+        firstCategory.classList.add("selected")
     }
 }
 </script>
