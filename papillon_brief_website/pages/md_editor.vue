@@ -3,7 +3,7 @@
         <black-header />
         <div class="grid">
             <div class="left-pane">
-                <category-bar />
+                <category-bar class="cate" />
                 <div class="txt-content">
                     <div class="title">
                         <input type="text" placeholder="タイトル" v-model="titleStr" />
@@ -58,6 +58,10 @@ export default {
             grid-row: 1;
             grid-column: 1;
             background: #1f1f1f;
+
+            .cate {
+                overflow-x: scroll;
+            }
 
             .txt-content {
                 padding-left: 50px;
