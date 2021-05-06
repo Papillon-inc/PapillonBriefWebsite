@@ -60,8 +60,8 @@ export default {
 
   // Markdown it
   markdownit: {
-    injected: true,
     preset: 'default',
+    injected: true,
     linkify: true,
     breaks: false,
     html: false,
@@ -69,7 +69,8 @@ export default {
     typographer: true,
     use: [
       'markdown-it-div',
-      'markdown-it-attrs'
+      'markdown-it-attrs',
+      'markdown-it-br'
     ]
   },
 

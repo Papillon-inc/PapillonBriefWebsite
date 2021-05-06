@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <textarea v-model="markdown" />
-        <div v-html="$md.render(markdown)"></div>
+        <div v-html="$md.render(markdown)" class=".md"></div>
     </div>
 </template>
 
@@ -20,4 +20,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
 </style>
