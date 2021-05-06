@@ -30,6 +30,7 @@ export default {
 
     padding-left: 70px;
     line-height: 80px;
+    border: none;
 
     .txt {
         position: absolute;
