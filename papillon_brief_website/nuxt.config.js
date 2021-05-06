@@ -39,6 +39,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
     'nuxt-fontawesome',
     'nuxt-webfontloader',
     ['nuxt-mail', {
@@ -51,11 +52,26 @@ export default {
           pass: 'qeCR4MjStFCgaHU'
         }
       }
-    }]
+    }],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  // Markdown it
+  markdownit: {
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: false,
+    html: false,
+    runtime: true,
+    typographer: true,
+    use: [
+      'markdown-it-div',
+      'markdown-it-attrs'
+    ]
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
