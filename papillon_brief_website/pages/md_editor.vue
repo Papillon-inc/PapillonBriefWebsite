@@ -47,6 +47,7 @@ export default {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    background: #fafafa;
 
     .grid {
         position: relative;
@@ -58,6 +59,8 @@ export default {
             grid-row: 1;
             grid-column: 1;
             background: #1f1f1f;
+            box-shadow: 5px 5px 20px #00000029;
+            z-index: 10;
 
             .cate {
                 overflow-x: scroll;
