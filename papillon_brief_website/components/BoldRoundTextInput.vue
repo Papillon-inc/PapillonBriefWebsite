@@ -30,7 +30,8 @@ input {
   font-size: 32px;
   padding-left: 30px;
   background: #f6f6f6;
-  border: none;
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
 
   @media screen and (max-width: 1000px) {
     height: 50px;

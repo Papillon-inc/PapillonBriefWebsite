@@ -252,8 +252,6 @@ body, html {
   padding: 0;
 }
 
-
-//FIXME: 三角形を出したい
 select {
   position: relative;
   margin-top: 18px;
@@ -1117,6 +1115,7 @@ select {
       position: relative;
       top: 80px;
       left: -24px;
+      width: 65%;
 
       @media screen and (max-width: 1570px) {
         top: 55px;

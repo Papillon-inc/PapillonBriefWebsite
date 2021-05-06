@@ -1,18 +1,61 @@
 <template>
     <div class="container">
-        <bold-text-input placeholder="パスワード" areaLabel="パスワード" color="white" />
+        <div class="group">
+            <span class="medium">Welcome Back</span><br>
+            <span class="big">Papillon coworker</span>
+            <bold-round-text-input type="password" placeholder="Password" areaLabel="パスワード" color="white" class="text-input" />
+        </div>
     </div>
 </template>
 
 <script>
-import BoldTextInput from '~/components/BoldTextInput.vue'
+import BoldRoundTextInput from '~/components/BoldRoundTextInput.vue'
 
 export default {
     components: {
-        BoldTextInput
+        BoldRoundTextInput
     }
 }
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #f6f6f6;
+    overflow: hidden;
+
+    .group {
+        position: relative;
+        top: calc(50% - 153px);
+        height: auto;
+        width: 65%;
+        left: 17.5%;
+
+        .medium {
+            color: #212121;
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .big {
+            color: #7565E1;
+            font-family: 'Roboto', sans-serif;
+            font-size: 64px;
+            font-weight: bold;
+        }
+
+        .text-input {
+            width: 100%;
+        }
+    }
+}
 </style>
