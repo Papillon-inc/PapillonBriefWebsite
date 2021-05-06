@@ -40,38 +40,41 @@ export default {
 .category_bar {
     height: 64px;
     width: 100%;
-    background: violet;
+    background: white;
     color: #212121;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    line-height: 64px;
+    line-height: 46px;
     scrollbar-width: none;
-
-    padding-left: 0px;
 
     ul {
         display: inline;
         overflow-x: scroll;
         white-space: nowrap;
 
+        padding-right: 60px;
+
         li:first-child {
-            margin-right: 15px;
             font-weight: 900;
+            margin-right: 20px;
         }
 
         li {
-            margin-left: 15px;
-            margin-right: 15px;
+            margin-top: -8px;
+            height: 46px;
             display: inline-block;
         }
 
         .category {
             cursor: pointer;
+            padding-left: 35px;
+            padding-right: 35px;
         }
 
         .selected {
             border-radius: 100px;
             background: #E16565;
+            color: white;
         }
     }
 }
