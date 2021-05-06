@@ -80,7 +80,7 @@
           </div>
           <div class="topic">
             お名前<br>
-            <bold-text-input placeholder="姓" areaLabel="姓" /><br>
+            <bold-text-input placeholder="姓" areaLabel="姓" />
             <bold-text-input placeholder="名" areaLabel="名" /><br>
           </div>
           <div class="topic">
@@ -250,29 +250,6 @@ export default {
 body, html {
   margin: 0;
   padding: 0;
-}
-
-input {
-  margin-top: 18px;
-  width: 65%;
-  height: 87px;
-  font-size: 32px;
-  padding-left: 30px;
-  background: #f6f6f6;
-  border: none;
-
-  @media screen and (max-width: 1000px) {
-    height: 50px;
-    font-size: 20px;
-  }
-
-  @media screen and (max-width: 600px) {
-    margin-top: 14px;
-    height: 30px;
-    padding-left: 15px;
-    padding-left: 5%;
-    font-size: 14px;
-  }
 }
 
 
