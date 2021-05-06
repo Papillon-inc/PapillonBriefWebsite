@@ -1,12 +1,22 @@
 <template>
     <div class="container">
-        <textarea v-model="markdown" />
-        <div v-html="$md.render(markdown)" class=".md"></div>
+        <black-header />
+        <table>
+            <tr>
+                <textarea v-model="markdown" />
+                <div v-html="$md.render(markdown)" class="md"></div>
+            </tr>
+        </table>
     </div>
 </template>
 
 <script>
+import BlackHeader from '~/components/BlackHeader.vue'
+
 export default {
+    components: {
+        BlackHeader
+    },
     data() {
         const markdown = `
 # AASDF
@@ -21,4 +31,9 @@ export default {
 
 <style scoped lang="scss">
 
+.container {
+    width: 100vw;
+    height: 100vh;
+
+}
 </style>
