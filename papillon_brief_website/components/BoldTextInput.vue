@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <input type="text" :placeholder="placeholder" v-bind:area-label="areaLabel" />
+        <input type="text" :placeholder="placeholder" :area-label="areaLabel" :style="{background: color}" />
     </div>
 </template>
 
@@ -8,7 +8,11 @@
 export default {
     props: {
         "placeholder": String,
-        "areaLabel": String
+        "areaLabel": String,
+        "color": {
+            type: String,
+            required: false
+        }
     }
 }
 </script>
