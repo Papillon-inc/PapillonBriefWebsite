@@ -17,6 +17,13 @@ export default {
                 "Cat1", "Cat2", "MyCat", "OutCat", "InterCattingfulness", "asdf"
             ]
         }
+    },
+    methods: {
+
+    },
+    mounted() {
+        const firstCategory = document.getElementsByClassName('category')[0];
+        firstCategory.classList.add("selected");
     }
 }
 </script>
@@ -54,6 +61,11 @@ export default {
 
         .category {
             cursor: pointer;
+        }
+
+        .selected {
+            border-radius: 100px;
+            background: #E16565;
         }
     }
 }
