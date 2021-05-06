@@ -1,12 +1,17 @@
 <template>
     <div class="black-header">
-        株式会社Papillon
+        <span class="txt">株式会社Papillon</span>
+        <purple-button  class="purple-button"/>
     </div>
 </template>
 
 <script>
+import PurpleButton from '~/components/PurpleButton.vue'
+
 export default {
-    
+    components: {
+        PurpleButton
+    }
 }
 </script>
 
@@ -24,5 +29,18 @@ export default {
 
     padding-left: 70px;
     line-height: 80px;
+
+    .txt {
+        position: absolute;
+    }
+
+    .purple-button {
+        top: 16px;
+        position: absolute;
+        right: 60px;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
 }
 </style>
