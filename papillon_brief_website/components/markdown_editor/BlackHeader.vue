@@ -19,6 +19,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 .black-header {
+    position: relative;
     height: 80px;
     width: 100%;
     background: black;
