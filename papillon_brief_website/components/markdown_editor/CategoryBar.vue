@@ -70,6 +70,7 @@ export default {
             cursor: pointer;
             padding-left: 35px;
             padding-right: 35px;
+            transition: 0.2s;
         }
 
         .selected {
