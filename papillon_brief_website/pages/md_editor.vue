@@ -1,18 +1,19 @@
 <template>
     <div class="container">
+        <textarea v-model="markdown" />
         <div v-html="$md.render(markdown)"></div>
     </div>
 </template>
 
 <script>
 export default {
-    computed: {
-        markdown: function() {
-            const md = `
-# asdfasa  
-## asdfasdfadfasdfa
-  `
-            return md
+    data() {
+        const markdown = `
+# AASDF
+## asdf
+`
+        return {
+            markdown
         }
     }
 }
