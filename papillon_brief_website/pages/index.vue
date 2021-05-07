@@ -90,7 +90,7 @@
           <div class="topic">
             お問い合わせ内容<br>
             <div class="selectWrap">
-              <select name="inquiry" aria-label="問い合わせ">
+              <select name="inquiry" area-label="問い合わせ">
                 <option selected="true" disabled="disabled">選択してください...</option>
                 <option value="question">質問</option>
                 <option value="idea">意見</option>
