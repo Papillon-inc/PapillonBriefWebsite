@@ -77,6 +77,8 @@ export default {
                 })
                 .then((docRef) => {
                     alert("投稿しました")
+                    this.title = ""
+                    this.markdown = ""
                 })
                 .catch((e) => {
                     console.log(e)

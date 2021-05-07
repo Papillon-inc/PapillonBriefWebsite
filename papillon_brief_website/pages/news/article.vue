@@ -108,6 +108,7 @@ export default {
           }
         }
       }
+
       .papillon:after {
         content: "Papillon";
         position: absolute;
@@ -224,7 +225,7 @@ export default {
     }
 
     .content {
-        margin-top: 300px;
+        margin-top: 220px;
         margin-left: 15px;
         margin-bottom: 120px;;
 
