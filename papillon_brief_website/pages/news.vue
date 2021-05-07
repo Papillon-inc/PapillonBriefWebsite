@@ -1,42 +1,43 @@
 <template>
 	<div class="container">
-		<div class="bar">
-			<div class="papillon">
-				<img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
-			</div>
-			<div class="menu">
-				<span class="product">Product</span>
-				<span class="news">News</span>
-				<span class="contact">Contact</span>
-				<span class="info">Information</span>
-			</div>
-      	</div>
+    <div class="pad">
+      <div class="bar">
+        <div class="papillon">
+          <img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
+        </div>
+        <div class="menu">
+          <span class="product">Product</span>
+          <span class="news">News</span>
+          <span class="contact">Contact</span>
+          <span class="info">Information</span>
+        </div>
+          </div>
 
-		<div class="news-block">
-			<div class="news-text">News</div>
-			<div class="news-subtext">当社の様々な情報をお伝えします。</div>
-			<div class="filter-dropdown-field">
-				<select class="filter-dropdown" name="filter">
-					<option selected="true">All</option>
-				</select>
-			</div>
-			<div class="articles-field">
-				<div v-for="(article, index) in articles" :key="index" class="article">
-					<span class="date">{{article.date}}</span>
-					<span class="title">{{article.title}}</span>
-					<span class="category">{{article.category}}</span>
-					<br>
-					<br>
-				</div>
-			</div>
-		</div>
-
+      <div class="news-block">
+        <div class="news-text">News</div>
+        <div class="news-subtext">当社の様々な情報をお伝えします。</div>
+        <div class="filter-dropdown-field">
+          <select class="filter-dropdown" name="filter">
+            <option selected="true">All</option>
+          </select>
+        </div>
+        <div class="articles-field">
+          <div v-for="(article, index) in articles" :key="index" class="article">
+            <span class="date">{{article.date}}</span>
+            <span class="title">{{article.title}}</span>
+            <span class="category">{{article.category}}</span>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
 		<!-- <nuxt-link to="terms_of_use">利用規約</nuxt-link>
 		<br>
 		<nuxt-link to="privacy_policy">プライバシーポリシー</nuxt-link>
 		<br>
 		<nuxt-link to="help">ヘルプ</nuxt-link> -->
-		<Footer />
+    <Footer />
 	</div>
 </template>
 
@@ -122,13 +123,15 @@ select {
 .container {
 	position: relative;
 	width: 100%;
-	padding-left: 10%;
-	padding-right: 10%;
 	background: #FAFAFA;
 
 	font-size: 28px;
 
-	.bar {
+  .pad {
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    .bar {
       position: relative;
       top: 100px;
       left: 50%;
@@ -279,80 +282,81 @@ select {
       }
     }
 
-	.news-block {
-		//background: red;
-		margin-top: 100px;
-		margin-left: 15px;
-		padding-bottom: 100px;
+    .news-block {
+      //background: red;
+      margin-top: 100px;
+      margin-left: 15px;
+      padding-bottom: 100px;
 
-		.news-text {
-			font-size: 72px;
-			font-weight: 900;
-			font-family: 'Roboto', sans-serif;
-		}
+      .news-text {
+        font-size: 72px;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
+      }
 
-		.news-subtext {
-			color: #767676;
-			font-weight: 900;
-		}
+      .news-subtext {
+        color: #767676;
+        font-weight: 900;
+      }
 
-		.filter-dropdown-field {
-			width: 100%;
-			height: 100px;
-			padding-top: 23px;
-			padding-bottom: 23px;
-			
-			.filter-dropdown {
-				position: absolute;
-				right: 14%;
-				height: 64px;
-				width: 220px;
-				border-style: solid;
-				border-width: 3px;
-				border-color: #92E065;
-				border-radius: 3px;
-				color: #92E065;
-			}
-		}
+      .filter-dropdown-field {
+        width: 100%;
+        height: 100px;
+        padding-top: 23px;
+        padding-bottom: 23px;
+        
+        .filter-dropdown {
+          position: absolute;
+          right: 14%;
+          height: 64px;
+          width: 220px;
+          border-style: solid;
+          border-width: 3px;
+          border-color: #92E065;
+          border-radius: 3px;
+          color: #92E065;
+        }
+      }
 
-		.articles-field {
-			background: white;
-			padding-top: 100px;
-			padding-left: 80px;
-			padding-bottom: 100px;
-			margin-top: 40px;
+      .articles-field {
+        background: white;
+        padding-top: 100px;
+        padding-left: 80px;
+        padding-bottom: 100px;
+        margin-top: 40px;
 
-			.article {
-				display: inline;
-				margin-bottom: 15px;
-				cursor: pointer;
-				
-				.date {
-					color: #767676;
-					font-size: 28px;
-				}
+        .article {
+          display: inline;
+          margin-bottom: 15px;
+          cursor: pointer;
+          
+          .date {
+            color: #767676;
+            font-size: 28px;
+          }
 
-				.title {
-					position: relative;
-					margin-left: 30px;
-					color: #212121;
-					font-size: 28px;
-				}
+          .title {
+            position: relative;
+            margin-left: 30px;
+            color: #212121;
+            font-size: 28px;
+          }
 
-				.category {
-					position: relative;
-					margin-left: 30px;
-					font-size: 16px;
-					background: #E16565;
-					padding-top: 7px;
-					padding-bottom: 7px;
-					padding-left: 24px;
-					padding-right: 24px;
-					border-radius: 100px;
-					color: white;
-				}
-			}
-		}
-	}
+          .category {
+            position: relative;
+            margin-left: 30px;
+            font-size: 16px;
+            background: #E16565;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 24px;
+            padding-right: 24px;
+            border-radius: 100px;
+            color: white;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
