@@ -22,7 +22,6 @@
 </template>
 
 <script>
-import { QuerySnapshot } from '@google-cloud/firestore'
 import BlackHeader from '~/components/markdown_editor/BlackHeader.vue'
 import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
 import firebase from '~/plugins/firebase'
