@@ -2,8 +2,9 @@
     <div class="category-modal">
         <div class="card">
             <div class="add-category-txt">カテゴリーを追加する</div>
-            <div class="times"><i class="fa fa-times" aria-hidden="true"></i>
-</div>
+            <div>
+                <font-awesome-icon icon="times" class="times" @click="tapped" />
+            </div>
             <bold-round-text-input type="text" placeholder="ex: esports" areaLabel="カテゴリ" color="white" class="input-category" />
             <purple-button class="add-category-button" content="追加" />
         </div>
@@ -49,9 +50,12 @@ export default {
 
         .times {
             position: fixed;
-            right: 26%;
-            height: 20px;
+            top: 15%;
+            right: 28%;
+            height: 40px;
             cursor: pointer;
+            font-size: 26px;
+            color: #ccc;
         }
 
         .add-category-txt {
