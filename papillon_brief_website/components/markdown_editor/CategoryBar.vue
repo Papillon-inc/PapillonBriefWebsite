@@ -5,7 +5,7 @@
             <li v-for="(n, i) in categories" :key="n" class="category" @click="selectCategory(i)">
                 {{ n }}
             </li>
-            <li>+</li>
+            <li @click="tapPlus">+</li>
         </ul>
     </div>
 </template>
@@ -32,6 +32,9 @@ export default {
 
             const firstCategory = document.getElementsByClassName('category')[n]
             firstCategory.classList.add("selected")
+        },
+        tapPlus() {
+            this.$emit('plus-tapped')
         }
     },
     watch: {

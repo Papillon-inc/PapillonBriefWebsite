@@ -1,12 +1,18 @@
 <template>
     <div class="button">
-        投稿
+        {{ content }}
     </div>
 </template>
 
 <script>
 export default {
-    
+    props: {
+        "content": {
+            type: String,
+            required: false,
+            'default': "投稿"
+        }
+    }
 }
 </script>
 

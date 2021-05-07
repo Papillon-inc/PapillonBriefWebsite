@@ -1,9 +1,10 @@
 <template>
     <div class="container">
+        <category-modal class="cat-modal" @tapped="hideModal" />
         <black-header />
         <div class="grid">
             <div class="left-pane">
-                <category-bar class="cate" />
+                <category-bar class="cate" @plus-tapped="showModal" />
                 <div class="txt-content">
                     <div class="title">
                         <input type="text" placeholder="タイトル" v-model="titleStr" />
@@ -24,15 +25,16 @@
 <script>
 import BlackHeader from '~/components/markdown_editor/BlackHeader.vue'
 import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
+import CategoryModal from '~/components/markdown_editor/CategoryModal.vue'
 import firebase from '~/plugins/firebase'
 
 const db = firebase.firestore()
-let articlesRef
 
 export default {
     components: {
         BlackHeader,
-        CategoryBar
+        CategoryBar,
+        CategoryModal
     },
     data() {
         return {
@@ -40,8 +42,15 @@ export default {
             titleStr: ""
         }
     },
-    created() {
-        articlesRef = db.collection("articles")
+    methods: {
+        showModal() {
+            const modal = document.getElementsByClassName("cat-modal")[0]
+            modal.style.display = "block"
+        },
+        hideModal() {
+            const modal = document.getElementsByClassName("cat-modal")[0]
+            modal.style.display = "none"
+        }
     }
 }
 </script>
@@ -55,6 +64,12 @@ export default {
     height: 100vh;
     overflow-x: hidden;
     background: #fafafa;
+
+    .cat-modal {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
 
     .grid {
         position: relative;

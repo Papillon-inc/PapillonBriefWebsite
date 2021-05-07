@@ -46,4 +46,8 @@ input {
     font-size: 14px;
   }
 }
+
+input:focus {
+  outline: none;
+}
 </style>
