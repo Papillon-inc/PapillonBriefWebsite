@@ -5,10 +5,10 @@
 				<img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
 			</div>
 			<div class="menu">
-				<span class="product" @click="product_scroll">Product</span>
-				<span class="news" @click="news_scroll">News</span>
-				<span class="contact" @click="contact_scroll">Contact</span>
-				<span class="info" @click="information_scroll">Information</span>
+				<span class="product">Product</span>
+				<span class="news">News</span>
+				<span class="contact">Contact</span>
+				<span class="info">Information</span>
 			</div>
       	</div>
 
@@ -20,64 +20,64 @@
 					<option selected="true">All</option>
 				</select>
 			</div>
-			<br>
-			<br>
-			<div v-for="n in news" :key="n">
-				{{n.title}}
+			<div class="articles-field">
+				<div v-for="(article, index) in articles" :key="index" class="article">
+					<span class="date">{{article.date}}</span>
+					<span class="title">{{article.title}}</span>
+					<span class="category">{{article.category}}</span>
+					<br>
+					<br>
+				</div>
 			</div>
-			<br>
 		</div>
 
-		<nuxt-link to="terms_of_use">利用規約</nuxt-link>
+		<!-- <nuxt-link to="terms_of_use">利用規約</nuxt-link>
 		<br>
 		<nuxt-link to="privacy_policy">プライバシーポリシー</nuxt-link>
 		<br>
-		<nuxt-link to="help">ヘルプ</nuxt-link>
+		<nuxt-link to="help">ヘルプ</nuxt-link> -->
 	</div>
 </template>
 
 <script>
+import firebase from "~/plugins/firebase.js"
+
+const db = firebase.firestore()
 
 export default {
-  data() {
+  	data() {
 		return {
-			news: [
-        {
-          "date": "2019/12/03",
-          "title": "会社を設立しました"
-        },
-        {
-          "date": "2020/01/01",
-          "title": "謹賀新年 今年も精進します"
-        },
-        {
-          "date": "2020/03/01",
-          "title": "事務所OPEN！"
-        },
-        {
-          "date": "2020/11/20",
-          "title": "順調にプロダクトの開発が進んでいます！"
-        },
-        {
-          "date": "2020/11/29",
-          "title": "サイトリニューアルのお知らせ"
-        },
-        {
-          "date": "2021/03/26",
-          "title": "ステーションAIに入居"
-        },
-				{
-					"date": "2021/04/14",
-					"title": "利用規約を掲載"
-				}
-      ]
+			articles: []
 		}
+	},
+	mounted() {
+		db.collection("articles")
+			.get()
+			.then((querySnapshot) => {
+				querySnapshot.forEach((doc) => {
+					const data = doc.data()
+					console.log(data.date.seconds)
+					let t = new Date(1970, 0, 1);
+					t.setUTCSeconds(data.date.seconds)
+					data.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
+					this.articles.push(data)
+				})
+			})
+			.catch((e) => {
+				console.log(e)
+			})
 	}
 }
 </script>
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body, html {
+	background: #fafafa;
+	margin: 0;
+	padding: 0;
+}
 
 select {
   position: relative;
@@ -114,19 +114,18 @@ select {
   }
 }
 
-
 .container {
 	position: relative;
-	top: 100px;
 	width: 100%;
 	padding-left: 10%;
 	padding-right: 10%;
+	background: #FAFAFA;
 
 	font-size: 28px;
 
 	.bar {
       position: relative;
-      top: 1px;
+      top: 100px;
       left: 50%;
 
       width: 100%;
@@ -277,8 +276,9 @@ select {
 
 	.news-block {
 		//background: red;
-		margin-top: 90px;
+		margin-top: 100px;
 		margin-left: 15px;
+		padding-bottom: 100px;
 
 		.news-text {
 			font-size: 72px;
@@ -307,6 +307,45 @@ select {
 				border-color: #92E065;
 				border-radius: 3px;
 				color: #92E065;
+			}
+		}
+
+		.articles-field {
+			background: white;
+			padding-top: 100px;
+			padding-left: 80px;
+			padding-bottom: 100px;
+			margin-top: 40px;
+
+			.article {
+				display: inline;
+				margin-bottom: 15px;
+				cursor: pointer;
+				
+				.date {
+					color: #767676;
+					font-size: 28px;
+				}
+
+				.title {
+					position: relative;
+					margin-left: 30px;
+					color: #212121;
+					font-size: 28px;
+				}
+
+				.category {
+					position: relative;
+					margin-left: 30px;
+					font-size: 16px;
+					background: #E16565;
+					padding-top: 7px;
+					padding-bottom: 7px;
+					padding-left: 24px;
+					padding-right: 24px;
+					border-radius: 100px;
+					color: white;
+				}
 			}
 		}
 	}
