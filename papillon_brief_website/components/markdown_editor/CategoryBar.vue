@@ -44,6 +44,14 @@ export default {
             this.$emit("category-selected", this.selectedCategory)
         }
     },
+    created() {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user == null) {
+                alert("認証できませんでした")
+                this.$router.push("/")
+            }
+        })
+    },
     mounted() {
         categoryRef = db.collection("categories")
         categoryRef.get()

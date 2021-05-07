@@ -35,7 +35,9 @@ export default {
             firebase.auth()
                 .signInWithEmailAndPassword("info@papillon.co.jp", this.password)
                 .then((req) => {
+                    sessionStorage.setItem("user_email", req.user.email)
                     alert("サインインしました")
+                    this.$router.push("/md_editor")
                 })
                 .catch((e)=> {
                     console.log(e)
