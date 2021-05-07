@@ -19,7 +19,8 @@ let categoryRef
 export default {
     data() {
         return {
-            categories: []
+            categories: [],
+            selectedCategory: ""
         }
     },
     methods: {
@@ -32,18 +33,15 @@ export default {
 
             const firstCategory = document.getElementsByClassName('category')[n]
             firstCategory.classList.add("selected")
+            this.selectedCategory = firstCategory.innerText
         },
         tapPlus() {
             this.$emit('plus-tapped')
         }
     },
     watch: {
-        categories: function() {
-            if (this.categories.length > 0) {
-                // 初期値で赤くする処理コメントアウトしておいた
-                // const firstCategory = document.getElementsByClassName('category')[0]
-                // firstCategory.classList.add("selected")
-            }
+        selectedCategory: function() {
+            this.$emit("category-selected", this.selectedCategory)
         }
     },
     mounted() {

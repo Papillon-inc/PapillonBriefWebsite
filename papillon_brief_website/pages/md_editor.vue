@@ -4,7 +4,7 @@
         <black-header @on-click="post" />
         <div class="grid">
             <div class="left-pane">
-                <category-bar class="cate" @plus-tapped="showModal" />
+                <category-bar class="cate" @plus-tapped="showModal" @category-selected="onCategorySelected" />
                 <div class="txt-content">
                     <div class="title">
                         <input type="text" placeholder="タイトル" v-model="titleStr" />
@@ -39,7 +39,8 @@ export default {
     data() {
         return {
             markdown: "",
-            titleStr: ""
+            titleStr: "",
+            selectedCategory: "",
         }
     },
     methods: {
@@ -52,12 +53,37 @@ export default {
             modal.style.display = "none"
         },
         post() {
+            if (this.selectedCategory == "" ) {
+                alert("カテゴリを選んでください")
+                return
+            }
+
+            if (this.titleStr == "") {
+                alert("タイトルを入れてください")
+                return
+            }
+
+            if (this.markdown == "") {
+                alert("本文を入れてください")
+                return
+            }
+
             db.collection("articles")
                 .add({
                     title: this.titleStr,
                     text: this.markdown,
-                    date: new Date()
+                    date: new Date(),
+                    category: this.selectedCategory
                 })
+                .then((docRef) => {
+                    alert("投稿しました")
+                })
+                .catch((e) => {
+                    console.log(e)
+                })
+        },
+        onCategorySelected(selectedCategory) {
+            this.selectedCategory = selectedCategory
         }
     }
 }
