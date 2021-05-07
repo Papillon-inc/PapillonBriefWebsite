@@ -2,9 +2,11 @@
 	<div class="container">
     <div class="pad">
       <div class="bar">
-        <div class="papillon">
-          <img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
-        </div>
+        <nuxt-link to="/">
+          <div class="papillon">
+            <img src="~/static/image/papillon.png" class="logo" alt="papillon logo" />
+          </div>
+        </nuxt-link>
         <div class="menu">
           <span class="product">Product</span>
           <span class="news">News</span>
@@ -68,6 +70,7 @@ export default {
   },
 	mounted() {
 		db.collection("articles")
+      .orderBy("date")
 			.get()
 			.then((querySnapshot) => {
 				querySnapshot.forEach((doc) => {

@@ -54,16 +54,16 @@ export default {
     },
     mounted() {
         categoryRef = db.collection("categories")
-        categoryRef.get()
-            .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    const data = doc.data()
-                    this.categories.push(data.name)
-                })
+        categoryRef.onSnapshot((querySnapshot) => {
+            this.categories = []
+            querySnapshot.forEach((doc) => {
+                const data = doc.data()
+                this.categories.push(data.name)
             })
             .catch((e) => {
                 console.log(e)
             })
+        })
     }
 }
 </script>

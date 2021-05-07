@@ -51,6 +51,8 @@ export default {
     },
     created() {
         const id = this.$route.query.id
+        if (id == null) return
+        
         db.collection("articles")
             .doc(id)
             .get()
