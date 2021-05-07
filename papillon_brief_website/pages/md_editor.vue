@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <category-modal class="cat-modal" @tapped="hideModal" />
-        <black-header />
+        <black-header @on-click="post" />
         <div class="grid">
             <div class="left-pane">
                 <category-bar class="cate" @plus-tapped="showModal" />
@@ -26,6 +26,9 @@
 import BlackHeader from '~/components/markdown_editor/BlackHeader.vue'
 import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
 import CategoryModal from '~/components/markdown_editor/CategoryModal.vue'
+import firebase from "~/plugins/firebase.js"
+
+const db = firebase.firestore()
 
 export default {
     components: {
@@ -47,6 +50,14 @@ export default {
         hideModal() {
             const modal = document.getElementsByClassName("cat-modal")[0]
             modal.style.display = "none"
+        },
+        post() {
+            db.collection("articles")
+                .add({
+                    title: this.titleStr,
+                    text: this.markdown,
+                    date: new Date()
+                })
         }
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="black-header">
         <span class="txt">株式会社Papillon</span>
-        <purple-button  class="purple-button"/>
+        <purple-button class="purple-button" @on-click="onClick"/>
     </div>
 </template>
 
@@ -11,6 +11,11 @@ import PurpleButton from '~/components/PurpleButton.vue'
 export default {
     components: {
         PurpleButton
+    },
+    methods: {
+        onClick() {
+            this.$emit("on-click")
+        }
     }
 }
 </script>
