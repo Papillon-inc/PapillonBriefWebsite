@@ -36,15 +36,20 @@
 		<nuxt-link to="privacy_policy">プライバシーポリシー</nuxt-link>
 		<br>
 		<nuxt-link to="help">ヘルプ</nuxt-link> -->
+		<Footer />
 	</div>
 </template>
 
 <script>
+import Footer from "~/components/Footer.vue"
 import firebase from "~/plugins/firebase.js"
 
 const db = firebase.firestore()
 
 export default {
+	components: {
+		Footer
+	},
   	data() {
 		return {
 			articles: []
