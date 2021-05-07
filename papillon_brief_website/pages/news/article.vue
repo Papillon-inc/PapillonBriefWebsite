@@ -24,9 +24,7 @@
                     {{ this.date }}
                 </div>
 
-                <div class="text">
-                    {{ this.text }}
-                </div>
+                <div class="text" v-html="$md.render(text)"></div>
             </div>
         </div>
         <Footer />
