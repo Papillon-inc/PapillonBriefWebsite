@@ -3,17 +3,48 @@
         <div class="group">
             <span class="medium">Welcome Back</span><br>
             <span class="big">Papillon coworker</span>
-            <bold-round-text-input type="password" placeholder="Password" areaLabel="パスワード" color="white" class="text-input" />
+            <bold-round-text-input 
+            type="password" 
+            placeholder="Password" 
+            areaLabel="パスワード" 
+            color="white" 
+            class="text-input"
+            @text-changed="textChanged" />
         </div>
+        <purple-button class="button" content="サインイン" @on-click="signin" />
     </div>
 </template>
 
 <script>
 import BoldRoundTextInput from '~/components/BoldRoundTextInput.vue'
+import PurpleButton from '~/components/PurpleButton.vue'
+import firebase from '~/plugins/firebase'
 
 export default {
+    data() {
+        return {
+            password: ""
+        }
+    },
     components: {
-        BoldRoundTextInput
+        BoldRoundTextInput,
+        PurpleButton
+    },
+    methods: {
+        signin() {
+            firebase.auth()
+                .signInWithEmailAndPassword("info@papillon.co.jp", this.password)
+                .then((req) => {
+                    alert("サインインしました")
+                })
+                .catch((e)=> {
+                    console.log(e)
+                    alert('サインイン失敗')
+                })
+        },
+        textChanged(text) {
+            this.password = text
+        }
     }
 }
 </script>
@@ -56,6 +87,15 @@ body, html {
         .text-input {
             width: 100%;
         }
+    }
+
+    .button {
+        position: fixed;
+        right: 17.5%;
+        top: calc(50% + 128px);
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
     }
 }
 </style>
