@@ -11,7 +11,7 @@
           <span class="contact">Contact</span>
           <span class="info">Information</span>
         </div>
-          </div>
+      </div>
 
       <div class="news-block">
         <div class="news-text">News</div>
