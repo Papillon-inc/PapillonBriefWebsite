@@ -22,7 +22,7 @@
           </select>
         </div>
         <div class="articles-field">
-          <div v-for="(article, index) in articles" :key="index" class="article">
+          <div v-for="(article, index) in articles" :key="index" class="article" @click="showArticlePage(index)">
             <span class="date">{{article.date}}</span>
             <span class="title">{{article.title}}</span>
             <span class="category">{{article.category}}</span>
@@ -56,16 +56,26 @@ export default {
 			articles: []
 		}
 	},
+  methods: {
+    showArticlePage(index) {
+      this.$router.push({
+        path: "/news/article",
+        query: {
+          id: this.articles[index].id
+        }
+      })
+    }
+  },
 	mounted() {
 		db.collection("articles")
 			.get()
 			.then((querySnapshot) => {
 				querySnapshot.forEach((doc) => {
 					const data = doc.data()
-					console.log(data.date.seconds)
 					let t = new Date(1970, 0, 1);
 					t.setUTCSeconds(data.date.seconds)
 					data.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
+          data.id = doc.id
 					this.articles.push(data)
 				})
 			})

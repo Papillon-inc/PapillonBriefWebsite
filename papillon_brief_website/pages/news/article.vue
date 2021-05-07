@@ -1,6 +1,7 @@
 <template>
     <div class="article-container">
-        asdfasdf
+        asdfasdf<br>
+        {{ this.$route.query.id }}
     </div>
 </template>
 
