@@ -26,9 +26,6 @@
 import BlackHeader from '~/components/markdown_editor/BlackHeader.vue'
 import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
 import CategoryModal from '~/components/markdown_editor/CategoryModal.vue'
-import firebase from '~/plugins/firebase'
-
-const db = firebase.firestore()
 
 export default {
     components: {

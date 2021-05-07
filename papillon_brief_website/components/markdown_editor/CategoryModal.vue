@@ -5,8 +5,15 @@
             <div>
                 <font-awesome-icon icon="times" class="times" @click="tapped" />
             </div>
-            <bold-round-text-input type="text" placeholder="ex: esports" areaLabel="カテゴリ" color="white" class="input-category" />
-            <purple-button class="add-category-button" content="追加" />
+            <bold-round-text-input 
+            type="text" 
+            placeholder="ex: esports" 
+            areaLabel="カテゴリ" 
+            color="white" 
+            class="input-category" 
+            @text-changed="textChanged"
+            />
+            <purple-button class="add-category-button" content="追加" @on-click="addCategory" />
         </div>
     </div>
 </template>
@@ -14,15 +21,40 @@
 <script>
 import BoldRoundTextInput from '~/components/BoldRoundTextInput.vue'
 import PurpleButton from '~/components/PurpleButton.vue'
+import firebase from '~/plugins/firebase'
+
+const db = firebase.firestore()
 
 export default {
     components: {
         BoldRoundTextInput,
         PurpleButton
     },
+    data() {
+        return {
+            categoryText: ""
+        }
+    },
     methods: {
         tapped() {
             this.$emit("tapped")
+        },
+        textChanged(text) {
+            this.categoryText = text
+        },
+        addCategory() {
+            if (this.categoryText == "") return
+
+            db.collection("categories")
+                .add({
+                    name: this.categoryText
+                })
+                .then((docRef) => {
+                    this.tapped()
+                })
+                .catch((e) => {
+                    console.log(e)
+                })
         }
     }
 }

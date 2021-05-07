@@ -1,5 +1,5 @@
 <template>
-    <div class="button">
+    <div class="button" @click="onClick">
         {{ content }}
     </div>
 </template>
@@ -11,6 +11,11 @@ export default {
             type: String,
             required: false,
             'default': "投稿"
+        }
+    },
+    methods: {
+        onClick() {
+            this.$emit('on-click')
         }
     }
 }

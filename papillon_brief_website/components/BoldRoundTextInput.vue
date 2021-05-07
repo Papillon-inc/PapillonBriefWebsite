@@ -1,11 +1,22 @@
 <template>
     <div class="container">
-        <input :type="type" :placeholder="placeholder" :area-label="areaLabel" :style="{background: color}" />
+        <input 
+        :type="type" 
+        :placeholder="placeholder" 
+        :area-label="areaLabel" 
+        :style="{background: color}" 
+        v-model="text"
+        />
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+      return {
+        text: ""
+      }
+    },
     props: {
         "type": {
             type: String,
@@ -18,6 +29,11 @@ export default {
             type: String,
             required: false
         }
+    },
+    watch: {
+      text: function() {
+        this.$emit("text-changed", this.text)
+      }
     }
 }
 </script>
