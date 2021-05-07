@@ -27,6 +27,7 @@ import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
 import firebase from '~/plugins/firebase'
 
 const db = firebase.firestore()
+let articlesRef
 
 export default {
     components: {
@@ -40,16 +41,7 @@ export default {
         }
     },
     created() {
-        const articlesRef = db.collection("articles")
-            .get()
-            .then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                    console.log(doc.data())
-                })
-            })
-            .catch((e) => {
-                console.log(e)
-            })
+        articlesRef = db.collection("articles")
     }
 }
 </script>

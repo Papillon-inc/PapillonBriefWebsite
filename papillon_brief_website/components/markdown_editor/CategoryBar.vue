@@ -11,26 +11,50 @@
 </template>
 
 <script>
+import firebase from '~/plugins/firebase'
+
+const db = firebase.firestore()
+let categoryRef
+
 export default {
     data() {
         return {
-            categories: [
-                "Cat1", "Cat2", "MyCat", "OutCat", "InterCattingfulness", "asdf"
-            ]
+            categories: []
         }
     },
     methods: {
         selectCategory(n) {
-            const selectedCategory = document.getElementsByClassName('selected')[0]
-            selectedCategory.classList.remove("selected")
+            const selectedCategories = document.getElementsByClassName('selected')
+            if (selectedCategories.length > 0) {
+                const selectedCategory = selectedCategories[0]
+                selectedCategory.classList.remove("selected")
+            }
 
             const firstCategory = document.getElementsByClassName('category')[n]
             firstCategory.classList.add("selected")
         }
     },
+    watch: {
+        categories: function() {
+            if (this.categories.length > 0) {
+                // 初期値で赤くする処理コメントアウトしておいた
+                // const firstCategory = document.getElementsByClassName('category')[0]
+                // firstCategory.classList.add("selected")
+            }
+        }
+    },
     mounted() {
-        const firstCategory = document.getElementsByClassName('category')[0]
-        firstCategory.classList.add("selected")
+        categoryRef = db.collection("categories")
+        categoryRef.get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data()
+                    this.categories.push(data.name)
+                })
+            })
+            .catch((e) => {
+                console.log(e)
+            })
     }
 }
 </script>
