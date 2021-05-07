@@ -22,8 +22,12 @@
 </template>
 
 <script>
+import { QuerySnapshot } from '@google-cloud/firestore'
 import BlackHeader from '~/components/markdown_editor/BlackHeader.vue'
 import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
+import firebase from '~/plugins/firebase'
+
+const db = firebase.firestore()
 
 export default {
     components: {
@@ -35,6 +39,18 @@ export default {
             markdown: "",
             titleStr: ""
         }
+    },
+    created() {
+        const articlesRef = db.collection("articles")
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    console.log(doc)
+                })
+            })
+            .catch((e) => {
+                console.log(e)
+            })
     }
 }
 </script>
