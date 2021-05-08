@@ -34,11 +34,6 @@
         </div>
       </div>
     </div>
-		<!-- <nuxt-link to="terms_of_use">利用規約</nuxt-link>
-		<br>
-		<nuxt-link to="privacy_policy">プライバシーポリシー</nuxt-link>
-		<br>
-		<nuxt-link to="help">ヘルプ</nuxt-link> -->
     <Footer />
 	</div>
 </template>
@@ -143,6 +138,11 @@ select {
   .pad {
     padding-left: 10%;
     padding-right: 10%;
+
+    @media screen and (max-width: 600px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
     
     .bar {
       position: relative;
@@ -211,11 +211,11 @@ select {
         color: #767676;
 
         @media screen and (max-width: 1000px) {
-          top: 10px;
+          top: 8px;
         }
 
         @media screen and (max-width: 600px) {
-          top: 2px;
+          top: -10px;
         }
 
         .product {
@@ -296,20 +296,34 @@ select {
     }
 
     .news-block {
-      //background: red;
       margin-top: 100px;
       margin-left: 15px;
       padding-bottom: 100px;
+
+      @media screen and (max-width: 600px) {
+        margin-top: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 50px;
+      }
 
       .news-text {
         font-size: 72px;
         font-weight: 900;
         font-family: 'Roboto', sans-serif;
+
+        @media screen and (max-width: 600px) {
+          font-size: 36px;
+        }
       }
 
       .news-subtext {
         color: #767676;
         font-weight: 900;
+
+        @media screen and (max-width: 600px) {
+          font-size: 20px;
+        }
       }
 
       .filter-dropdown-field {
@@ -328,6 +342,11 @@ select {
           border-color: #92E065;
           border-radius: 3px;
           color: #92E065;
+
+          @media screen and (max-width: 600px) {
+            height: 32px;
+            width: 110px;
+          }
         }
       }
 
@@ -338,6 +357,13 @@ select {
         padding-bottom: 100px;
         margin-top: 40px;
 
+        @media screen and (max-width: 600px) {
+          margin-top: 20px;
+          padding-left: 20px;
+          padding-top: 25px;
+          padding-bottom: 20px;
+        }
+
         .article {
           display: inline;
           margin-bottom: 15px;
@@ -346,6 +372,10 @@ select {
           .date {
             color: #767676;
             font-size: 28px;
+
+            @media screen and (max-width: 600px) {
+              font-size: 16px;
+            }
           }
 
           .title {
@@ -353,6 +383,11 @@ select {
             margin-left: 30px;
             color: #212121;
             font-size: 28px;
+
+            @media screen and (max-width: 600px) {
+              font-size: 16px;
+              margin-left: 15px;
+            }
           }
 
           .category {
@@ -366,6 +401,15 @@ select {
             padding-right: 24px;
             border-radius: 100px;
             color: white;
+
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+              margin-left: 15px;
+              padding-top: 4px;
+              padding-bottom: 4px;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
           }
         }
       }
