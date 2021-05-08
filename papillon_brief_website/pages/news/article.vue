@@ -43,10 +43,10 @@ export default {
     },
     data() {
         return {
-            category: "asdf",
-            title: "Title",
-            date: "2020/1/1",
-            text: "akffkkk<br>asdf\\nasdfasdfsssas"
+            category: "",
+            title: "",
+            date: "",
+            text: ""
         }
     },
     created() {
@@ -62,7 +62,7 @@ export default {
                 this.text = data.text
                 this.category = data.category
                 let t = new Date(1970, 0, 1);
-				t.setUTCSeconds(data.date.seconds)
+				        t.setUTCSeconds(data.date.seconds)
                 this.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
             })
     }
@@ -70,9 +70,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.pad {
+
+.article-container {
+  background: #fafafa;
+
+  .pad {
     padding-left: 10%;
     padding-right: 10%;
+    
+    @media screen and (max-width: 600px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 
     .bar {
       position: relative;
@@ -229,7 +238,13 @@ export default {
     .content {
         margin-top: 220px;
         margin-left: 15px;
-        margin-bottom: 120px;;
+        margin-bottom: 120px;
+
+        @media screen and (max-width: 600px) {
+          margin-top: 50px;
+          margin-bottom: 40px;
+          margin-right: 15px;
+        }
 
         .category {
             font-size: 16px;
@@ -240,6 +255,14 @@ export default {
             padding-top: 5px;
             padding-bottom: 5px;
             color: white;
+
+            @media screen and (max-width: 600px) {
+              font-size: 12px;
+              padding-left: 12px;
+              padding-right: 12px;
+              padding-top: 4px;
+              padding-bottom: 4px;
+            }
         }
 
         .title {
@@ -247,17 +270,33 @@ export default {
             font-size: 36px;
             font-weight: 500;
             color: #212121;
+
+            @media screen and (max-width: 600px) {
+              margin-top: 40px;
+              font-size: 24px;
+            }
         }
 
         .date {
             font-size: 20px;
             color: #767676;
+
+            @media screen and (max-width: 600px) {
+              font-size: 16px;
+            }
         }
 
         .text {
             margin-top: 70px;
             font-size: 42px;
+
+            @media screen and (max-width: 600px) {
+              margin-top: 30px;
+              font-size: 28px;
+            }
         }
     }
+  }
 }
+
 </style>
