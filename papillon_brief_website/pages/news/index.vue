@@ -26,10 +26,8 @@
         <div class="articles-field">
           <div v-for="(article, index) in articles" :key="index" class="article" @click="showArticlePage(index)">
             <span class="date">{{article.date}}</span>
-            <span class="title">{{article.title}}</span>
             <span class="category">{{article.category}}</span>
-            <br>
-            <br>
+            <span class="title">{{article.title}}</span>
           </div>
         </div>
       </div>
@@ -385,8 +383,10 @@ select {
             font-size: 28px;
 
             @media screen and (max-width: 600px) {
+              display: block;
               font-size: 16px;
-              margin-left: 15px;
+              margin-left: 0;
+              margin-top: 5px;
             }
           }
 
