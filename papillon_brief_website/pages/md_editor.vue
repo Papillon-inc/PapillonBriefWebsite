@@ -9,7 +9,7 @@
                     <div class="title">
                         <input type="text" placeholder="タイトル" v-model="titleStr" />
                     </div>
-                    <textarea v-model="markdown" placeholder="本文" />
+                    <textarea v-model="markdown" placeholder="本文" class="md-editor" />
                 </div>
             </div>
             <div class="right-pane">
@@ -88,9 +88,19 @@ export default {
         }
     },
     mounted() {
-        const mdEditor = document.getElementsByClassName("md")[0]
+        const mdEditor = document.getElementsByClassName("md-editor")[0]
         mdEditor.addEventListener('paste', (event) => {
-            console.log(event.clipboardData)
+            if (!event.clipboardData) return
+            if (!event.clipboardData.types) return
+            if (event.clipboardData.types.length != 2) return
+            if (event.clipboardData.types[1] != "Files") return
+
+            const image = event.clipboardData.items[1].getAsFile()
+            const fileReader = new FileReader()
+            fileReader.onload = (e) => {
+                console.log(e.target.result)
+            }
+            fileReader.readAsDataURL(image)
         })
     }
 }
