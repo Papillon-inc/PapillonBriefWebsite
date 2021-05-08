@@ -56,8 +56,10 @@ export default {
         categoryRef = db.collection("categories")
         categoryRef.onSnapshot((querySnapshot) => {
             this.categories = []
-            querySnapshot.forEach((doc) => {
+            //console.log(querySnapshot.docs)
+            querySnapshot.docs.forEach((doc) => {
                 const data = doc.data()
+                //console.log(data)
                 this.categories.push(data.name)
             })
             .catch((e) => {

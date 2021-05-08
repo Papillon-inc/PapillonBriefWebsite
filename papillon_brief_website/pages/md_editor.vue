@@ -86,6 +86,12 @@ export default {
         onCategorySelected(selectedCategory) {
             this.selectedCategory = selectedCategory
         }
+    },
+    mounted() {
+        const mdEditor = document.getElementsByClassName("md")[0]
+        mdEditor.addEventListener('paste', (event) => {
+            console.log(event.clipboardData)
+        })
     }
 }
 </script>
