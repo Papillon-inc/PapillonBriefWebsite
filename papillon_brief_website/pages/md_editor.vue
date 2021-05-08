@@ -28,6 +28,7 @@ import CategoryBar from '~/components/markdown_editor/CategoryBar.vue'
 import CategoryModal from '~/components/markdown_editor/CategoryModal.vue'
 import firebase from "~/plugins/firebase.js"
 import 'firebase/storage'
+import uuid from 'uuid'
 
 const db = firebase.firestore()
 const storage = firebase.storage()
@@ -98,8 +99,8 @@ export default {
             if (event.clipboardData.types[1] != "Files") return
 
             const image = event.clipboardData.items[1].getAsFile()
-            console.log(image)
-            storage.ref().child('image/img.png').put(image)
+            const uid = uuid()
+            storage.ref().child(`image/${uid}.png`).put(image)
                 .then((snapShot) => {
                     console.log(snapShot)
                     const bucketName = snapShot.metadata.bucket
