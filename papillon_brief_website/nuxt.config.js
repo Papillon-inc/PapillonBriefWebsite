@@ -63,14 +63,15 @@ export default {
     preset: 'default',
     injected: true,
     linkify: true,
-    breaks: false,
-    html: false,
+    breaks: true,
+    html: true,
     runtime: true,
     typographer: true,
     use: [
       'markdown-it-div',
       'markdown-it-attrs',
-      'markdown-it-br'
+      'markdown-it-br',
+      'markdown-it-linkify-images'
     ]
   },
 

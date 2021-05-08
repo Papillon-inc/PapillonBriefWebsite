@@ -29,9 +29,6 @@ import CategoryModal from '~/components/markdown_editor/CategoryModal.vue'
 import firebase from "~/plugins/firebase.js"
 import 'firebase/storage'
 
-// const mili = require('markdown-it-linkify-images')
-// $md.use(mili)
-
 const db = firebase.firestore()
 const storage = firebase.storage()
 
@@ -105,8 +102,11 @@ export default {
             storage.ref().child('image/img.png').put(image)
                 .then((snapShot) => {
                     console.log(snapShot)
-                    // const bucketName = ""
-                    // const url = `https://firebasestorage.googleapis.com/v0/b/${bucketName}/o/${encodeURIComponent(filePath)}?alt=media`
+                    const bucketName = snapShot.metadata.bucket
+                    const fullPath = snapShot.metadata.fullPath
+                    const url = `https://firebasestorage.googleapis.com/v0/b/${bucketName}/o/${encodeURIComponent(fullPath)}?alt=media`
+                    console.log(url)
+                    this.markdown += `![image](${url})`
                 })
                 .catch((e) => {
                     console.log(e)
