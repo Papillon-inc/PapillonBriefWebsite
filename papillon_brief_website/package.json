@@ -22,6 +22,7 @@
     "markdown-it-attrs": "^4.0.0",
     "markdown-it-br": "^1.0.0",
     "markdown-it-div": "^1.1.0",
+    "markdown-it-linkify-images": "^2.0.0",
     "nuxt": "^2.15.3",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-mail": "^1.0.1",
