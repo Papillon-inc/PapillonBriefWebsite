@@ -19,8 +19,11 @@
         <div class="news-text">News</div>
         <div class="news-subtext">当社の様々な情報をお伝えします。</div>
         <div class="filter-dropdown-field">
-          <select class="filter-dropdown" name="filter">
-            <option selected="true">All</option>
+          <select class="filter-dropdown" name="filter" v-model="selectedCategory">
+            <option selected="true" value="">All</option>
+            <option v-for="(category, index) in categories" :key="index" :value="category.name">
+              {{ category.name }}
+            </option>
           </select>
         </div>
         <div class="articles-field">
@@ -46,9 +49,11 @@ export default {
 	components: {
 		Footer
 	},
-  	data() {
+  data() {
 		return {
-			articles: []
+			articles: [],
+      categories: [],
+      selectedCategory: ""
 		}
 	},
   methods: {
@@ -61,7 +66,41 @@ export default {
       })
     }
   },
-	mounted() {
+  watch: {
+    selectedCategory: function() {
+      if (this.selectedCategory == "") {
+        db.collection("articles")
+          .get()
+          .then((querySnapshot) => {
+            this.articles = []
+            querySnapshot.forEach((doc) => {
+              const data = doc.data()
+              let t = new Date(1970, 0, 1);
+              t.setUTCSeconds(data.date.seconds)
+              data.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
+              data.id = doc.id
+              this.articles.push(data)
+            })
+        })
+      } else {
+        db.collection("articles")
+          .where("category", "==", this.selectedCategory)
+          .get()
+          .then((querySnapshot) => {
+            this.articles = []
+            querySnapshot.forEach((doc) => {
+              const data = doc.data()
+              let t = new Date(1970, 0, 1);
+              t.setUTCSeconds(data.date.seconds)
+              data.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
+              data.id = doc.id
+              this.articles.push(data)
+            })
+          })
+      }
+    }
+  },
+  created() {
 		db.collection("articles")
       .orderBy("date")
 			.get()
@@ -78,6 +117,18 @@ export default {
 			.catch((e) => {
 				console.log(e)
 			})
+
+    db.collection("categories")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          const data = doc.data()
+          this.categories.push(data)
+        })
+      })
+      .catch((e) => {
+        console.log(e)
+      })
 	}
 }
 </script>
