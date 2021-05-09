@@ -363,7 +363,7 @@ select {
         }
 
         .article {
-          display: inline;
+          //display: inline;
           margin-bottom: 15px;
           cursor: pointer;
           
