@@ -25,7 +25,6 @@
                 <div class="date">
                     {{ this.date }}
                 </div>
-
                 <div class="text" v-html="$md.render(text)"></div>
             </div>
         </div>
@@ -67,7 +66,7 @@ export default {
 				        t.setUTCSeconds(data.date.seconds)
                 this.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
             })
-    }
+    },
 }
 </script>
 
@@ -295,6 +294,9 @@ export default {
             @media screen and (max-width: 600px) {
               margin-top: 30px;
               font-size: 28px;
+              /deep/ img{
+                width: 80vw;
+              }
             }
         }
     }
