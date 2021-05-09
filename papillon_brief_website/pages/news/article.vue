@@ -9,7 +9,7 @@
                </nuxt-link>
                 <div class="menu">
                     <span class="product">Product</span>
-                    <nuxt-link to="news">
+                    <nuxt-link to="/news">
                       <span class="news">News</span>
                     </nuxt-link>
                     <span class="contact">Contact</span>
