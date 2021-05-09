@@ -70,6 +70,7 @@ export default {
     selectedCategory: function() {
       if (this.selectedCategory == "") {
         db.collection("articles")
+          .orderBy("date")
           .get()
           .then((querySnapshot) => {
             this.articles = []
@@ -85,6 +86,7 @@ export default {
       } else {
         db.collection("articles")
           .where("category", "==", this.selectedCategory)
+          .orderBy("date")
           .get()
           .then((querySnapshot) => {
             this.articles = []

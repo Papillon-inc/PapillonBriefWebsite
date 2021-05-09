@@ -161,6 +161,8 @@ import BoldTextInput from '~/components/BoldTextInput.vue'
 import Footer from '~/components/Footer.vue'
 import firebase from "~/plugins/firebase.js"
 
+const db = firebase.firestore()
+
 export default {
   components: {
     Navigation,
@@ -169,40 +171,26 @@ export default {
   },
   data() {
     return {
-      news: [
-        {
-          "date": "2019/12/03",
-          "title": "会社を設立しました"
-        },
-        {
-          "date": "2020/01/01",
-          "title": "謹賀新年 今年も精進します"
-        },
-        {
-          "date": "2020/03/01",
-          "title": "事務所OPEN！"
-        },
-        {
-          "date": "2020/11/20",
-          "title": "順調にプロダクトの開発が進んでいます！"
-        },
-        {
-          "date": "2020/11/29",
-          "title": "サイトリニューアルのお知らせ"
-        },
-        {
-          "date": "2021/03/26",
-          "title": "ステーションAIに入居"
-        },
-				{
-					"date": "2021/04/14",
-					"title": "利用規約を掲載"
-				}
-      ],
+      news: [],
       navi:""
     }
   },
-  mounted: function(){
+  created: function() {
+    db.collection("articles")
+      .get()
+      .then((querySnapshot) => {
+        this.articles = []
+        querySnapshot.forEach((doc) => {
+          const data = doc.data()
+          let t = new Date(1970, 0, 1);
+          t.setUTCSeconds(data.date.seconds)
+          data.date = t.getFullYear() + "/" + ('00' + (t.getMonth()+1)).slice(-2) + "/" + ('00'+t.getDate()).slice(-2)
+          data.id = doc.id
+          this.news.push(data)
+        })
+    })
+  },
+  mounted: function() {
     this.navi = document.getElementsByClassName("navi")[0];
   },
   methods: {
