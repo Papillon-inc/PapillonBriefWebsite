@@ -3,7 +3,12 @@
     <div class="text">
       <span class="copyright">@2020 Papillon Inc</span>
       <!-- <font-awesome-icon :icon="['fab', 'twitter']" class="twitter" /> -->
-      <span class="papillon">@Papillon</span>
+      <nuxt-link to="/terms_of_use">
+        <span class="terms_of_use">Terms of use</span>
+      </nuxt-link>
+      <nuxt-link to="/privacy_policy">
+        <span class="privacy_policy">Privacy policy</span>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -58,10 +63,25 @@ export default {
       }
     }
 
-    .papillon {
+    .terms_of_use {
       position: absolute;
       right: 10%;
       text-align: left;
+    }
+
+    .privacy_policy {
+      position: absolute;
+      right: calc(14% + 130px);
+      text-align: left;
+
+      @media screen and (max-width: 600px) {
+        right: calc(14% + 70px);
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
     }
   }
 }
