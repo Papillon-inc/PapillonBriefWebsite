@@ -14,23 +14,23 @@
         <div class="cards">
             <span class="card">
                 <img src="~/static/image/help/logo-only.png" alt="e-players-logo" />
-                asdf
+                e-playersとは？
             </span>
             <span class="card">
                 <img src="~/static/image/help/world.png" alt="world" />
-                lkjh
+                主催者スタートガイド
             </span>
             <span class="card">
                 <img src="~/static/image/help/controller.png" alt="controller" />
-                asdf
+                参加者スタートガイド
             </span>
             <span class="card">
                 <img src="~/static/image/help/question.png" alt="question" />
-                lkjh
+                よくある質問
             </span>
             <span class="card">
                 <img src="~/static/image/help/team.png" alt="team" />
-                asdf
+                さまざまなヒント
             </span>
         </div>
         <Footer />
@@ -101,8 +101,16 @@ export default {
             margin-right: 1%;
             border-radius: 30px;
 
+            color: #212121;
+            font-size: 24px;
+            font-weight: 500;
+            font-family: 'Noto Sans JP', sans-serif;
+            text-align: center;
+            line-height: 430px;
+
             background: white;
             box-shadow: 0px 3px 3px #00000029;
+            cursor: pointer;
 
             img {
                 position: absolute;
