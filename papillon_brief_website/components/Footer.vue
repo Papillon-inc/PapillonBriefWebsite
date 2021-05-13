@@ -9,6 +9,9 @@
       <nuxt-link to="/privacy_policy">
         <span class="privacy_policy">Privacy policy</span>
       </nuxt-link>
+      <nuxt-link to="/help">
+        <span class="help">Help</span>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -76,6 +79,16 @@ export default {
 
       @media screen and (max-width: 600px) {
         right: calc(14% + 70px);
+      }
+    }
+
+    .help {
+      position: absolute;
+      right: calc(18% + 260px);
+      text-align: left;
+
+      @media screen and (max-width: 600px) {
+        right: calc(18% + 140px);
       }
     }
 
