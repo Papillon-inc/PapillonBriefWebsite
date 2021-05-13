@@ -11,6 +11,28 @@
             </div>
             <search-bar class="search-bar" />
         </div>
+        <div class="cards">
+            <span class="card">
+                <img src="~/static/image/help/logo-only.png" alt="e-players-logo" />
+                asdf
+            </span>
+            <span class="card">
+                <img src="~/static/image/help/world.png" alt="world" />
+                lkjh
+            </span>
+            <span class="card">
+                <img src="~/static/image/help/controller.png" alt="controller" />
+                asdf
+            </span>
+            <span class="card">
+                <img src="~/static/image/help/question.png" alt="question" />
+                lkjh
+            </span>
+            <span class="card">
+                <img src="~/static/image/help/team.png" alt="team" />
+                asdf
+            </span>
+        </div>
         <Footer />
     </div>
 </template>
@@ -40,7 +62,6 @@ export default {
         position: relative;
         margin-top: 260px;
         margin-left: 10%;
-        margin-bottom: 200px;
 
         width: 80%;
         //background: cyan;
@@ -60,6 +81,35 @@ export default {
 
         .search-bar {
             margin-top: 55px;
+        }
+    }
+
+    .cards {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 3%;
+        height: 260px;
+        width: 96%;
+        //background: magenta;
+        margin-bottom: 200px;
+
+        .card {
+            display: inline-block;
+            position: relative;
+            width: 18%;
+            height: 100%;
+            margin-right: 1%;
+            border-radius: 30px;
+
+            background: white;
+            box-shadow: 0px 3px 3px #00000029;
+
+            img {
+                position: absolute;
+                bottom: 30%;
+                width: 56%;
+                left: 22%;
+            }
         }
     }
 }
