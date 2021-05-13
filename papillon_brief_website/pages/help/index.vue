@@ -33,6 +33,10 @@
                 さまざまなヒント
             </span>
         </div>
+        <div class="content">
+            <div class="title">e-playersとは？</div>
+            <div class="detail">説明</div>
+        </div>
         <Footer />
     </div>
 </template>
@@ -118,6 +122,26 @@ export default {
                 width: 56%;
                 left: 22%;
             }
+        }
+    }
+
+    .content {
+        width: 80%;
+        margin-left: 10%;
+        font-weight: 500;
+        font-family: 'Noto Sans JP', sans-serif;
+
+        .title {
+            font-size: 64px;
+            color: #212121;
+            text-align: center;
+        }
+
+        .detail {
+            margin-top: 30px;
+            margin-bottom: 120px;
+            font-size: 36px;
+            color: #767676;
         }
     }
 }
