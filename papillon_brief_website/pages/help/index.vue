@@ -16,14 +16,18 @@
                 <img src="~/static/image/help/logo-only.png" alt="e-players-logo" />
                 e-playersとは？
             </span>
-            <span class="card">
-                <img src="~/static/image/help/world.png" alt="world" />
-                主催者スタートガイド
-            </span>
-            <span class="card">
-                <img src="~/static/image/help/controller.png" alt="controller" />
-                参加者スタートガイド
-            </span>
+            <nuxt-link to="/help/organizer">
+                <span class="card">
+                    <img src="~/static/image/help/world.png" alt="world" />
+                    主催者スタートガイド
+                </span>
+            </nuxt-link>
+            <nuxt-link to="/help/organizer">
+                <span class="card">
+                    <img src="~/static/image/help/controller.png" alt="controller" />
+                    参加者スタートガイド
+                </span>
+            </nuxt-link>
             <span class="card">
                 <img src="~/static/image/help/question.png" alt="question" />
                 よくある質問
@@ -35,7 +39,11 @@
         </div>
         <div class="content">
             <div class="title">e-playersとは？</div>
-            <div class="detail">説明</div>
+            <div class="detail">
+                e-playersはesports大会を誰でもラクに開催できるサービスです。<br>
+                e-playersは主催者の負担を減らし、主催者自身も大会に参加して楽しめるくらいラクに大会開催・運営ができることをコンセプトとして誕生しました。<br>
+                <!-- そしてこれからは利用者の方々の声に寄り添い改善を重ね、大会運営において強い信頼感のあるサービスを目指していきます。 -->
+            </div>
         </div>
         <Footer />
     </div>
