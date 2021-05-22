@@ -14,6 +14,12 @@
             エントリーしている大会一覧の画面（以下、エントリー画面）には<br>
             「大会を作成」と書かれたボタンが用意されています。<br>
             このボタンを押すと大会を作成するために必要な情報を入力する画面が表示されます。<br>
+            なお、エントリー画面には以下の大会が表示されます。<br>
+            <ul>
+                <li>自分が主催している大会</li>
+                <li>自分がアシスタントとして追加されている大会</li>
+                <li>自分が参加している大会</li>
+            </ul>
             <img src="~/static/image/help/organizer/create_tournament1.png" />
             <img src="~/static/image/help/organizer/create_tournament2.png" /><br>
             大会作成には、以下の情報が必須です。<br>

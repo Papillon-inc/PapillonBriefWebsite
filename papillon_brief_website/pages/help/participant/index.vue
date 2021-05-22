@@ -19,7 +19,14 @@
             なお、大会の開催時刻が被ってしまう場合は参加登録することができないようにしています。<br>
             <img src="~/static/image/help/participant/enter.png" /><br>
             参加登録をした大会はエントリーしている大会一覧の画面（以下、エントリー画面）に表示されます。<br>
-
+            エントリー画面には以下の大会が表示されます。<br>
+            <ul>
+                <li>自分が主催している大会</li>
+                <li>自分がアシスタントとして追加されている大会</li>
+                <li>自分が参加している大会</li>
+            </ul>
+            <img src="~/static/image/help/participant/match.png" /><br>
+            
         </div>
         <Footer />
     </div>
