@@ -1,6 +1,8 @@
 <template>
     <div class="container">
         <Header />
+        <HelpSearchBlock />
+        <HelpCards />
         <div class="content">
             <h1>参加者スタートガイド</h1>
             ここではどのように大会に参加するのかについて説明します。
@@ -17,7 +19,7 @@
             なお、大会の開催時刻が被ってしまう場合は参加登録することができないようにしています。<br>
             <img src="~/static/image/help/participant/enter.png" /><br>
             参加登録をした大会はエントリーしている大会一覧の画面（以下、エントリー画面）に表示されます。<br>
-            
+
         </div>
         <Footer />
     </div>
@@ -26,11 +28,15 @@
 <script>
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
+import HelpCards from '~/components/help/HelpCards.vue'
+import HelpSearchBlock from '~/components/help/HelpSearchBlock.vue'
 
 export default {
     components: {
         Header,
-        Footer
+        Footer,
+        HelpCards,
+        HelpSearchBlock
     }
 }
 </script>

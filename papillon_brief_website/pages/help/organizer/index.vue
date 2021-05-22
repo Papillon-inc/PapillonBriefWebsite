@@ -1,6 +1,8 @@
 <template>
     <div class="container">
         <Header />
+        <HelpSearchBlock />
+        <HelpCards />
         <div class="content">
             <h1>主催者スタートガイド</h1>
             ここではどのように大会を作成し、運営していくのかについて説明します。
@@ -49,11 +51,15 @@
 <script>
 import Header from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
+import HelpCards from '~/components/help/HelpCards.vue'
+import HelpSearchBlock from '~/components/help/HelpSearchBlock.vue'
 
 export default {
     components: {
         Header,
-        Footer
+        Footer,
+        HelpCards,
+        HelpSearchBlock
     }
 }
 </script>
