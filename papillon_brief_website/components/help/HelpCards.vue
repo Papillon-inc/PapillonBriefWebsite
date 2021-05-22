@@ -13,7 +13,7 @@
                     主催者スタートガイド
                 </span>
             </nuxt-link>
-            <nuxt-link to="/help/organizer">
+            <nuxt-link to="/help/participant">
                 <span class="card">
                     <img src="~/static/image/help/controller.png" alt="controller" />
                     参加者スタートガイド
