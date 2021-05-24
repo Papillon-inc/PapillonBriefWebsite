@@ -19,11 +19,11 @@
                     参加者スタートガイド
                 </span>
             </nuxt-link>
-            <span class="card">
+            <span class="card disabled">
                 <img src="~/static/image/help/question.png" alt="question" />
                 よくある質問
             </span>
-            <span class="card">
+            <span class="card disabled">
                 <img src="~/static/image/help/team.png" alt="team" />
                 さまざまなヒント
             </span>
@@ -73,6 +73,11 @@
                 width: 56%;
                 left: 22%;
             }
+        }
+
+        .disabled {
+            background: #dbdbdb;
+            cursor: default;
         }
     }
 }
