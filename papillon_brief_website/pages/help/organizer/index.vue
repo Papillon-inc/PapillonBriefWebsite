@@ -47,8 +47,14 @@
             <img src="~/static/image/help/organizer/member.png" /><br>
             大会に関係しているユーザーの情報は「メンバー画面」からも確認できます。<br>
             メンバー画面は管理画面から遷移して表示することができます。<br>
-            <img src="~/static/image/help/organizer/member.png" /><br>
-            トーナメント表画面から、どのユーザーがどれくらい勝ち進んでいるかを確認することもできます。
+            <img src="~/static/image/help/organizer/manage_win.png" /><br>
+            やむを得ない場合はメンバーに対して敗北処理を行うこともできます。<br>
+            欠席やもめ事が起きてしまい大会が進行できなくなった場合はこの機能を使用します。<br>
+            <img src="~/static/image/help/organizer/brackets.png" /><br>
+            トーナメント表画面から、どのユーザーがどれくらい勝ち進んでいるかを確認することもできます。<br>
+            トーナメント表は自動で描画されていくので、主催者が管理する必要もありません。<br>
+
+
         </div>
         <Footer />
     </div>
